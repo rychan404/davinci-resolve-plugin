@@ -19,6 +19,8 @@ MIN_HOST_INTERVAL = 0.2
 RELAX_FACTOR = 0.7
 MAX_ATTEMPTS = 6
 MAX_BACKOFF = 8.0
+PREVIEW_URL_ROLE = Qt.UserRole + 1
+PREVIEW_STATE_ROLE = Qt.UserRole + 2
 
 
 class ThumbnailFetcher:
@@ -174,6 +176,7 @@ class ThumbnailLoader(QObject):
 
 class ResultsGrid(QListWidget):
     download_requested = Signal(object)
+    preview_progress = Signal(int, int)
 
     def __init__(self, parent=None, loader=None):
         super().__init__(parent)
@@ -185,6 +188,7 @@ class ResultsGrid(QListWidget):
         self.setDragEnabled(False)
         self.setWordWrap(True)
         self._results, self._items_by_url = {}, {}
+        self._resolved_urls, self._resolved_tiles, self._total_tiles = set(), 0, 0
         self.loader = loader or ThumbnailLoader()
         self.loader.setParent(self)
         self.loader.signals.loaded.connect(self._apply_thumbnail)
@@ -195,11 +199,14 @@ class ResultsGrid(QListWidget):
         self.clear()
         self._results.clear()
         self._items_by_url.clear()
+        self._resolved_urls.clear()
+        self._resolved_tiles, self._total_tiles = 0, len(results)
         self.loader.begin_generation()
-        placeholder = self.style().standardIcon(QStyle.SP_FileIcon)
+        pending = self.style().standardIcon(QStyle.SP_BrowserReload)
         for result in results:
             entry = QListWidgetItem(f"{result.title}\n[{result.source}]")
             entry.setData(Qt.UserRole, result.uid)
+            entry.setData(PREVIEW_URL_ROLE, result.preview_url)
             size = (
                 f"{result.width}x{result.height}"
                 if result.width and result.height
@@ -210,22 +217,36 @@ class ResultsGrid(QListWidget):
                 f"{get_license(result.license_id).name}\n"
                 f"alpha={result.has_alpha}\n{result.source_page_url}"
             )
-            entry.setIcon(placeholder)
+            self._set_state(entry, "pending", pending)
             self.addItem(entry)
             self._results[result.uid] = result
             if not result.preview_url:
                 self._mark_entry_failed(entry, "This result has no preview image.")
+                self._count_resolved(1)
                 continue
             entries = self._items_by_url.setdefault(result.preview_url, [])
             entries.append(entry)
             if len(entries) == 1:
                 self.loader.load(result.preview_url)
+        self.preview_progress.emit(self._resolved_tiles, self._total_tiles)
 
     def results(self) -> list[SearchResult]:
         return [
             self._results[self.item(index).data(Qt.UserRole)]
             for index in range(self.count())
         ]
+
+    def preview_counts(self) -> tuple[int, int]:
+        """Tiles whose preview has settled, and tiles in the grid."""
+        return self._resolved_tiles, self._total_tiles
+
+    def _set_state(self, entry, state: str, icon) -> None:
+        entry.setData(PREVIEW_STATE_ROLE, state)
+        entry.setIcon(icon)
+
+    def _count_resolved(self, tiles: int) -> None:
+        self._resolved_tiles += tiles
+        self.preview_progress.emit(self._resolved_tiles, self._total_tiles)
 
     def _apply_thumbnail(self, url: str, data: bytes) -> None:
         pixmap = pixmap_from_bytes(data)
@@ -234,15 +255,26 @@ class ResultsGrid(QListWidget):
                 url, "The preview format could not be rendered."
             )
             return
-        for entry in self._items_by_url.get(url, []):
-            entry.setIcon(QIcon(pixmap))
+        entries = self._items_by_url.get(url, [])
+        for entry in entries:
+            self._set_state(entry, "loaded", QIcon(pixmap))
+        if entries and url not in self._resolved_urls:
+            self._resolved_urls.add(url)
+            self._count_resolved(len(entries))
 
     def _mark_thumbnail_failed(self, url: str, message: str) -> None:
-        for entry in self._items_by_url.get(url, []):
+        entries = self._items_by_url.get(url, [])
+        for entry in entries:
             self._mark_entry_failed(entry, message)
+        if entries and url not in self._resolved_urls:
+            self._resolved_urls.add(url)
+            self._count_resolved(len(entries))
 
     def _mark_entry_failed(self, entry, message: str) -> None:
         entry.setToolTip(f"{entry.toolTip()}\n\nThumbnail unavailable: {message}")
+        self._set_state(
+            entry, "failed", self.style().standardIcon(QStyle.SP_MessageBoxWarning)
+        )
 
     def _emit_download(self, entry):
         if result := self._results.get(entry.data(Qt.UserRole)):

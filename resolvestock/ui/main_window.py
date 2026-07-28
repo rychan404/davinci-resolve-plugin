@@ -77,6 +77,8 @@ class MainWindow(QMainWindow):
         )
         self.status_label.setWordWrap(True)
         self.grid.download_requested.connect(self.download)
+        self._search_message = "ready"
+        self.grid.preview_progress.connect(self._show_preview_progress)
         controls = QHBoxLayout()
         controls.addWidget(self.search_input, 1)
         controls.addWidget(self.search_button)
@@ -131,7 +133,17 @@ class MainWindow(QMainWindow):
             message += " — some sources failed — " + "; ".join(
                 f"{name}: {error}" for name, error in outcome.errors.items()
             )
-        self.status_label.setText(message)
+        self._search_message = message
+        resolved, total = self.grid.preview_counts()
+        self._show_preview_progress(resolved, total)
+
+    def _show_preview_progress(self, resolved: int, total: int) -> None:
+        if total and resolved < total:
+            self.status_label.setText(
+                f"{self._search_message} — {resolved}/{total} previews loaded"
+            )
+        else:
+            self.status_label.setText(self._search_message)
 
     def download(self, result, threaded=True) -> None:
         self.status_label.setText(f"downloading {result.title}...")

@@ -1,3 +1,4 @@
+import base64
 import os
 import time
 from datetime import datetime, timezone
@@ -15,6 +16,7 @@ from resolvestock.config import Config
 from resolvestock.models import LibraryItem, SearchResult
 from resolvestock.sources.registry import SearchOutcome
 from resolvestock.ui.grid import (
+    PREVIEW_STATE_ROLE,
     ResultsGrid,
     ThumbnailFetcher,
     ThumbnailLoader,
@@ -22,6 +24,11 @@ from resolvestock.ui.grid import (
 )
 from resolvestock.ui.main_window import MainWindow
 from resolvestock.ui.tray import LibraryTray
+
+# Smallest decodable PNG, so a fake fetch produces a real QPixmap.
+PNG_BYTES = base64.b64decode(
+    "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg=="
+)
 
 
 @pytest.fixture(scope="module")
@@ -279,6 +286,31 @@ def test_grid_marks_results_without_a_preview_as_unavailable(app):
     assert "Thumbnail unavailable" in grid.item(0).toolTip()
 
 
+def test_grid_tracks_each_tile_from_pending_to_loaded(app):
+    pool, fetcher = ManualPool(), RecordingFetcher(payload=PNG_BYTES)
+    grid = ResultsGrid(loader=ThumbnailLoader(fetcher=fetcher, pool=pool))
+    asset = SearchResult(
+        **{**make_result().__dict__, "preview_url": "https://upload.example.org/a.jpg"}
+    )
+    grid.set_results([asset])
+    assert grid.item(0).data(PREVIEW_STATE_ROLE) == "pending"
+    assert grid.preview_counts() == (0, 1)
+
+    pool.run_all()
+    app.processEvents()
+    assert grid.item(0).data(PREVIEW_STATE_ROLE) == "loaded"
+    assert grid.preview_counts() == (1, 1)
+
+
+def test_grid_counts_a_result_with_no_preview_as_already_resolved(app):
+    grid = ResultsGrid(
+        loader=ThumbnailLoader(fetcher=RecordingFetcher(), pool=ManualPool())
+    )
+    grid.set_results([make_result()])
+    assert grid.item(0).data(PREVIEW_STATE_ROLE) == "failed"
+    assert grid.preview_counts() == (1, 1)
+
+
 def test_grid_restarts_the_generation_for_each_search(app):
     pool, fetcher = ManualPool(), RecordingFetcher()
     grid = ResultsGrid(loader=ThumbnailLoader(fetcher=fetcher, pool=pool))
@@ -332,6 +364,20 @@ def test_main_window_wires_search_download_and_credits(app, tmp_path):
     assert window._active_downloads == set()
     credits = window.export_credits(tmp_path / "CREDITS.txt")
     assert "Smoke by Jane" in credits.read_text(encoding="utf-8")
+
+
+def test_window_status_reports_preview_progress(app, tmp_path):
+    window = MainWindow(
+        FakeRegistry(),
+        FakeLibrary(tmp_path / "library"),
+        Config.load(tmp_path / "config.json"),
+    )
+    window._search_message = "1 result(s)"
+    window._show_preview_progress(3, 10)
+    assert window.status_label.text() == "1 result(s) — 3/10 previews loaded"
+
+    window._show_preview_progress(10, 10)
+    assert window.status_label.text() == "1 result(s)"
 
 
 def test_threaded_download_keeps_its_worker_alive_until_completion(app, tmp_path):
