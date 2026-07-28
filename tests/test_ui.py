@@ -13,7 +13,7 @@ from PySide6.QtWidgets import QApplication
 from resolvestock.config import Config
 from resolvestock.models import LibraryItem, SearchResult
 from resolvestock.sources.registry import SearchOutcome
-from resolvestock.ui.grid import ResultsGrid
+from resolvestock.ui.grid import ResultsGrid, pixmap_from_bytes
 from resolvestock.ui.main_window import MainWindow
 from resolvestock.ui.tray import LibraryTray
 
@@ -68,6 +68,20 @@ def test_grid_is_not_a_drag_source_and_emits_downloads(app):
     assert not grid.dragEnabled()
     assert grid.results() == [asset]
     assert received == [asset]
+
+
+def test_grid_renders_svg_previews_and_marks_bad_previews(app):
+    svg = b"""<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'>
+    <rect width='10' height='10' fill='red'/></svg>"""
+    assert not pixmap_from_bytes(svg).isNull()
+    asset = make_result()
+    asset = SearchResult(
+        **{**asset.__dict__, "preview_url": "https://example.invalid/p"}
+    )
+    grid = ResultsGrid()
+    grid.set_results([asset])
+    grid._apply_thumbnail(asset.preview_url, b"not an image")
+    assert "Thumbnail unavailable" in grid.item(0).toolTip()
 
 
 class FakeRegistry:
