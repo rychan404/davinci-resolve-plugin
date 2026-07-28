@@ -205,6 +205,26 @@ def test_thumbnail_fetcher_backs_the_whole_host_off_after_a_429(app):
     assert clock.slept == [2.0]
 
 
+def test_thumbnail_fetcher_recovers_its_pace_after_the_host_stops_pushing_back(app):
+    # One 429 widens the spacing; a short run of successes must bring it back
+    # down, otherwise a single early hiccup slows the whole rest of a search.
+    codes = [429] + [200] * 6
+
+    def handler(request):
+        if codes.pop(0) == 429:
+            return httpx.Response(429, headers={"Retry-After": "2"})
+        return httpx.Response(200, content=b"ok")
+
+    clock = FakeClock()
+    fetcher = build_fetcher(handler, clock, min_interval=0.2)
+    for index in range(6):
+        fetcher.fetch(f"https://upload.example.org/{index}.jpg")
+
+    interval = fetcher._hosts["upload.example.org"]["interval"]
+    # After 429 and 6 relaxes (0.7^6), the interval should be near 0.2
+    assert interval == pytest.approx(0.2, abs=0.04)
+
+
 def test_thumbnail_loader_drops_jobs_from_a_superseded_search(app):
     pool, fetcher = ManualPool(), RecordingFetcher()
     loader = ThumbnailLoader(fetcher=fetcher, pool=pool)

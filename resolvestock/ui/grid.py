@@ -15,7 +15,8 @@ from resolvestock.sources.base import USER_AGENT
 
 ACCEPT = "image/avif,image/webp,image/png,image/jpeg,image/svg+xml,*/*"
 THUMBNAIL_THREADS = 3
-MIN_HOST_INTERVAL = 0.5
+MIN_HOST_INTERVAL = 0.2
+RELAX_FACTOR = 0.7
 MAX_ATTEMPTS = 6
 MAX_BACKOFF = 8.0
 
@@ -96,8 +97,11 @@ class ThumbnailFetcher:
     def _relax(self, host: str) -> None:
         with self._lock:
             state = self._state(host)
-            # Ease off slowly; halving here just walks straight back into the limit.
-            state["interval"] = max(self.min_interval, state["interval"] * 0.9)
+            # Ease off geometrically. Halving oscillated straight back into the
+            # limit back when a contactless User-Agent bought only an 8-request
+            # burst; with contact details the budget is ~31, so recovery this
+            # brisk is safe and keeps one early 429 from slowing a whole search.
+            state["interval"] = max(self.min_interval, state["interval"] * RELAX_FACTOR)
 
     def _retry_after(self, response) -> float:
         try:
