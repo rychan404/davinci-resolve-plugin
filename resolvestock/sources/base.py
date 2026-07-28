@@ -8,7 +8,10 @@ import httpx
 from resolvestock.cache import ResponseCache, make_key
 from resolvestock.models import SearchResult
 
-USER_AGENT = "resolvestock/0.1 (stock sourcing for editors)"
+# Wikimedia rejects contactless agents with a 429 robot-policy error, so the
+# project URL has to travel with every request.
+HOMEPAGE = "https://github.com/rychan404/davinci-resolve-plugin"
+USER_AGENT = f"resolvestock/0.1 ({HOMEPAGE}) python-httpx"
 
 
 @dataclass(frozen=True)

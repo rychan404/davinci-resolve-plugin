@@ -5,6 +5,9 @@ from resolvestock.models import SearchResult
 from resolvestock.sources.base import CachedHttp, SearchQuery, Source
 
 ENDPOINT = "https://api.openverse.org/v1/images/"
+# Anonymous clients may not ask for more than this; Openverse answers 401, and
+# the registry then reports the whole source as failed.
+ANONYMOUS_PAGE_SIZE = 20
 
 
 class OpenverseSource(Source):
@@ -14,7 +17,11 @@ class OpenverseSource(Source):
         self.http = http
 
     def search(self, query: SearchQuery) -> list[SearchResult]:
-        params = {"q": query.text, "page": query.page, "page_size": query.per_page}
+        params = {
+            "q": query.text,
+            "page": query.page,
+            "page_size": min(query.per_page, ANONYMOUS_PAGE_SIZE),
+        }
         if query.vectors_only:
             params["extension"] = "svg"
         elif query.transparent_only:

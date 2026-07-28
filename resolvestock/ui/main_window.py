@@ -107,6 +107,10 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(central)
         self.refresh_tray()
 
+    def closeEvent(self, event):
+        self.grid.loader.stop()
+        super().closeEvent(event)
+
     def build_query(self) -> SearchQuery:
         return SearchQuery(
             self.search_input.text().strip(),
