@@ -46,6 +46,11 @@ class MainWindow(QMainWindow):
             config,
             QThreadPool.globalInstance(),
         )
+        # QThreadPool owns the C++ QRunnable, but not necessarily the Python
+        # wrappers captured by its callbacks. Retaining jobs until a queued
+        # completion signal reaches the UI thread prevents PySide from
+        # collecting a signal object while its worker is still emitting.
+        self._active_downloads: set[_DownloadJob] = set()
         self.setWindowTitle("resolvestock")
         self.resize(1100, 760)
         self.search_input = QLineEdit()
@@ -126,12 +131,20 @@ class MainWindow(QMainWindow):
 
     def download(self, result, threaded=True) -> None:
         self.status_label.setText(f"downloading {result.title}...")
-        signals = _DownloadSignals()
-        signals.finished.connect(self._on_download_finished)
-        signals.failed.connect(
-            lambda message: self.status_label.setText(f"failed: {message}")
-        )
+        signals = _DownloadSignals(self)
         job = _DownloadJob(self.library, result, signals)
+
+        def finished(item) -> None:
+            self._active_downloads.discard(job)
+            self._on_download_finished(item)
+
+        def failed(message: str) -> None:
+            self._active_downloads.discard(job)
+            self.status_label.setText(f"failed: {message}")
+
+        signals.finished.connect(finished)
+        signals.failed.connect(failed)
+        self._active_downloads.add(job)
         if threaded:
             self.pool.start(job)
         else:

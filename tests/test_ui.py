@@ -1,4 +1,5 @@
 import os
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -107,8 +108,25 @@ def test_main_window_wires_search_download_and_credits(app, tmp_path):
     assert window.grid.count() == 1
     window.download(make_result(), threaded=False)
     assert window.tray.count() == 1
+    assert window._active_downloads == set()
     credits = window.export_credits(tmp_path / "CREDITS.txt")
     assert "Smoke by Jane" in credits.read_text(encoding="utf-8")
+
+
+def test_threaded_download_keeps_its_worker_alive_until_completion(app, tmp_path):
+    window = MainWindow(
+        FakeRegistry(),
+        FakeLibrary(tmp_path / "library"),
+        Config.load(tmp_path / "config.json"),
+    )
+    window.download(make_result(), threaded=True)
+    assert len(window._active_downloads) == 1
+    deadline = time.monotonic() + 2
+    while window._active_downloads and time.monotonic() < deadline:
+        app.processEvents()
+        time.sleep(0.01)
+    assert window._active_downloads == set()
+    assert window.tray.count() == 1
 
 
 def test_empty_main_window_search_stays_local(app, tmp_path):
