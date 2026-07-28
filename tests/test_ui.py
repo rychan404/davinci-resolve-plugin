@@ -329,6 +329,7 @@ def grid_with_results(count, pool, fetcher):
 def test_grid_requests_a_first_batch_when_it_has_no_geometry_yet(app):
     # The widget was never shown, so visualItemRect cannot say what is visible.
     pool, fetcher = ManualPool(), RecordingFetcher(payload=PNG_BYTES)
+    # keep alive: pool.run_all() runs deferred jobs after this call returns
     grid = grid_with_results(40, pool, fetcher)
     pool.run_all()
     assert len(fetcher.urls) == 24
@@ -360,6 +361,23 @@ def test_grid_requests_more_previews_as_the_user_scrolls(app):
     app.processEvents()
     pool.run_all()
     assert len(fetcher.urls) > len(first_screen)
+
+
+def test_grid_progress_completes_without_requesting_every_tile(app):
+    # Lazy loading means most of these 40 tiles never enter the viewport, so
+    # the progress readout must track requested tiles, not the full grid —
+    # otherwise it stalls below 100% forever once the visible batch resolves.
+    pool, fetcher = ManualPool(), RecordingFetcher(payload=PNG_BYTES)
+    grid = grid_with_results(40, pool, fetcher)
+    grid.resize(400, 300)
+    grid.show()
+    app.processEvents()
+    grid.request_visible_previews()
+    pool.run_all()
+    app.processEvents()
+    resolved, requested = grid.preview_counts()
+    assert requested < 40
+    assert resolved == requested
 
 
 def test_grid_does_not_request_the_same_preview_twice(app):

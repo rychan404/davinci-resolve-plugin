@@ -190,8 +190,8 @@ class ResultsGrid(QListWidget):
         self.setDragEnabled(False)
         self.setWordWrap(True)
         self._results, self._items_by_url = {}, {}
-        self._resolved_urls, self._resolved_tiles, self._total_tiles = set(), 0, 0
-        self._requested_urls = set()
+        self._resolved_urls, self._resolved_tiles = set(), 0
+        self._requested_urls, self._requested_tiles = set(), 0
         self.loader = loader or ThumbnailLoader()
         self.loader.setParent(self)
         self.loader.signals.loaded.connect(self._apply_thumbnail)
@@ -204,7 +204,8 @@ class ResultsGrid(QListWidget):
         self._results.clear()
         self._items_by_url.clear()
         self._resolved_urls.clear()
-        self._resolved_tiles, self._total_tiles = 0, len(results)
+        self._requested_urls.clear()
+        self._resolved_tiles, self._requested_tiles = 0, 0
         self.loader.begin_generation()
         pending = self.style().standardIcon(QStyle.SP_BrowserReload)
         for result in results:
@@ -226,11 +227,13 @@ class ResultsGrid(QListWidget):
             self._results[result.uid] = result
             if not result.preview_url:
                 self._mark_entry_failed(entry, "This result has no preview image.")
+                # No loader work is coming for this tile, so it already counts
+                # toward the denominator alongside tiles that get requested.
+                self._requested_tiles += 1
                 self._count_resolved(1)
                 continue
             self._items_by_url.setdefault(result.preview_url, []).append(entry)
-        self._requested_urls.clear()
-        self.preview_progress.emit(self._resolved_tiles, self._total_tiles)
+        self.preview_progress.emit(self._resolved_tiles, self._requested_tiles)
         self.request_visible_previews()
 
     def results(self) -> list[SearchResult]:
@@ -240,8 +243,8 @@ class ResultsGrid(QListWidget):
         ]
 
     def preview_counts(self) -> tuple[int, int]:
-        """Tiles whose preview has settled, and tiles in the grid."""
-        return self._resolved_tiles, self._total_tiles
+        """Tiles whose preview has settled, and tiles actually requested."""
+        return self._resolved_tiles, self._requested_tiles
 
     def request_visible_previews(self) -> None:
         """Fetch previews for tiles on screen, and for a margin either side.
@@ -253,16 +256,19 @@ class ResultsGrid(QListWidget):
             if url in self._requested_urls:
                 continue
             self._requested_urls.add(url)
+            # A single preview URL can back multiple grid entries, and each
+            # entry is a separate tile the progress readout must account for.
+            self._requested_tiles += len(self._items_by_url.get(url, []))
             self.loader.load(url)
 
     def _visible_preview_urls(self) -> list[str]:
-        visible = self.viewport().rect().adjusted(0, -PRELOAD_MARGIN, 0, PRELOAD_MARGIN)
         if not self.isVisible() or self.viewport().height() <= 0:
             # Never shown, or laid out yet — fall back to a first screenful.
             # A never-shown top-level QListWidget already reports a nonzero
             # default viewport size, so height() alone cannot detect this case;
             # isVisible() stays False until show() + processEvents() run.
             return self._preview_urls()[:INITIAL_BATCH]
+        visible = self.viewport().rect().adjusted(0, -PRELOAD_MARGIN, 0, PRELOAD_MARGIN)
         urls = []
         for index in range(self.count()):
             entry = self.item(index)
@@ -290,7 +296,7 @@ class ResultsGrid(QListWidget):
 
     def _count_resolved(self, tiles: int) -> None:
         self._resolved_tiles += tiles
-        self.preview_progress.emit(self._resolved_tiles, self._total_tiles)
+        self.preview_progress.emit(self._resolved_tiles, self._requested_tiles)
 
     def _apply_thumbnail(self, url: str, data: bytes) -> None:
         pixmap = pixmap_from_bytes(data)
