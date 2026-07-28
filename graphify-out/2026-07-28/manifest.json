@@ -1,0 +1,157 @@
+{
+  ".claude/settings.json": {
+    "mtime": 1785264598.4928415,
+    "ast_hash": "264bb4bfdd97c1cbe923530213a729d4",
+    "semantic_hash": ""
+  },
+  "pyproject.toml": {
+    "mtime": 1785257246.6941223,
+    "ast_hash": "a78f0ca0672982d0bd9dff0be3e6a1d5",
+    "semantic_hash": ""
+  },
+  "resolvestock/__init__.py": {
+    "mtime": 1785256455.852749,
+    "ast_hash": "14ccb0ce8be93236c4937c2f51722e0c",
+    "semantic_hash": ""
+  },
+  "resolvestock/cache.py": {
+    "mtime": 1785257147.9378893,
+    "ast_hash": "b68dfe6a4bd5c7cb96ceb6074c60ec40",
+    "semantic_hash": ""
+  },
+  "resolvestock/cli.py": {
+    "mtime": 1785257148.3565621,
+    "ast_hash": "0b6ff1fa83e8af7667606d95209cac20",
+    "semantic_hash": ""
+  },
+  "resolvestock/config.py": {
+    "mtime": 1785257128.498548,
+    "ast_hash": "45c934746d893ae9311e8a6a03871c7c",
+    "semantic_hash": ""
+  },
+  "resolvestock/credits.py": {
+    "mtime": 1785257148.1019983,
+    "ast_hash": "221a28aa34c23c3b64f7b22dfe874d1c",
+    "semantic_hash": ""
+  },
+  "resolvestock/library.py": {
+    "mtime": 1785257148.0194905,
+    "ast_hash": "c19bd82bac0ba55d122dad50eca73cbe",
+    "semantic_hash": ""
+  },
+  "resolvestock/licenses.py": {
+    "mtime": 1785257128.4984713,
+    "ast_hash": "3a745f163c89233d46f4d13c24fe0937",
+    "semantic_hash": ""
+  },
+  "resolvestock/models.py": {
+    "mtime": 1785257128.4983265,
+    "ast_hash": "2c0c976903d3af4276739ebb31ee6425",
+    "semantic_hash": ""
+  },
+  "resolvestock/sources/__init__.py": {
+    "mtime": 1785256456.3247037,
+    "ast_hash": "243aec45e7f8303670189c9aa999f798",
+    "semantic_hash": ""
+  },
+  "resolvestock/sources/base.py": {
+    "mtime": 1785257128.4987779,
+    "ast_hash": "a193adcbfecd2bf5ea48de8441c2f624",
+    "semantic_hash": ""
+  },
+  "resolvestock/sources/openverse.py": {
+    "mtime": 1785257128.4986207,
+    "ast_hash": "df372c6566aa10cf1fa47b36f74698df",
+    "semantic_hash": ""
+  },
+  "resolvestock/sources/pixabay.py": {
+    "mtime": 1785257128.4990773,
+    "ast_hash": "bc0663956cda3c14a105bc717a3435f5",
+    "semantic_hash": ""
+  },
+  "resolvestock/sources/registry.py": {
+    "mtime": 1785257128.498946,
+    "ast_hash": "7232bf16d01f36eb50f619ef0a40bdc1",
+    "semantic_hash": ""
+  },
+  "resolvestock/sources/wikimedia.py": {
+    "mtime": 1785257128.4990842,
+    "ast_hash": "6e909962848c32d189654262cb816eb6",
+    "semantic_hash": ""
+  },
+  "resolvestock/ui/__init__.py": {
+    "mtime": 1785256552.4578185,
+    "ast_hash": "72961a470febea0c4208c20ffb597548",
+    "semantic_hash": ""
+  },
+  "resolvestock/ui/app.py": {
+    "mtime": 1785257128.498545,
+    "ast_hash": "da0779c6cbc9a109347d7cb973f72f78",
+    "semantic_hash": ""
+  },
+  "resolvestock/ui/grid.py": {
+    "mtime": 1785266435.7833278,
+    "ast_hash": "cfbf7311f4ea2f97278ec8b48eaa82bc",
+    "semantic_hash": ""
+  },
+  "resolvestock/ui/main_window.py": {
+    "mtime": 1785258771.436555,
+    "ast_hash": "6d1b1adbd2c05018b788921af3c03cd7",
+    "semantic_hash": ""
+  },
+  "resolvestock/ui/tray.py": {
+    "mtime": 1785257148.187074,
+    "ast_hash": "4dabc884dd462d50ad32124e8d6a4f7b",
+    "semantic_hash": ""
+  },
+  "tests/fixtures/openverse_transparent.json": {
+    "mtime": 1785257166.2181304,
+    "ast_hash": "cf7059fd526dd4dc0f8d03757df7f4b9",
+    "semantic_hash": ""
+  },
+  "tests/fixtures/pixabay_transparent.json": {
+    "mtime": 1785257166.3839703,
+    "ast_hash": "aa12fb2627828cee784dcab7cd1d4b43",
+    "semantic_hash": ""
+  },
+  "tests/fixtures/wikimedia_search.json": {
+    "mtime": 1785257166.302194,
+    "ast_hash": "3ef765706ecbe6086f90bac693dc380c",
+    "semantic_hash": ""
+  },
+  "tests/test_adapters.py": {
+    "mtime": 1785258615.2020876,
+    "ast_hash": "dee2089d002ec6432efb5ce6ee8f7b31",
+    "semantic_hash": ""
+  },
+  "tests/test_core.py": {
+    "mtime": 1785257128.4991016,
+    "ast_hash": "94a11b6e931d1ab8282d1eeae094c49d",
+    "semantic_hash": ""
+  },
+  "tests/test_ui.py": {
+    "mtime": 1785265642.3079479,
+    "ast_hash": "df2660e788d4555609f5e1f749cc4d4f",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1785264598.4926372,
+    "ast_hash": "82efb97a359f5c7290bf2513d14686be",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1785257246.7786508,
+    "ast_hash": "f1e319a0ba644697ae33ac4b4328bafb",
+    "semantic_hash": ""
+  },
+  "docs/spec.md": {
+    "mtime": 1785256666.2614264,
+    "ast_hash": "9349a5bfbaa7ef46323d5b3fecb65f08",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-07-28-stock-asset-app-v1.md": {
+    "mtime": 1785204180.0,
+    "ast_hash": "f3b3ca45ed93330a55b9689f1c2f53bb",
+    "semantic_hash": ""
+  }
+}
