@@ -1,0 +1,18 @@
+{
+  "total": 1,
+  "totalHits": 1,
+  "hits": [
+    {
+      "id": 1001,
+      "pageURL": "https://example.invalid/pixabay-arrow",
+      "type": "vector/svg",
+      "tags": "transparent arrow",
+      "previewURL": "https://example.invalid/preview.png",
+      "webformatURL": "https://example.invalid/web.png",
+      "largeImageURL": "https://example.invalid/large.png",
+      "imageWidth": 1920,
+      "imageHeight": 1080,
+      "user": "Fixture Author"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "query": {
+    "pages": {
+      "101": {
+        "pageid": 101,
+        "title": "File:Transparent arrow.svg",
+        "imageinfo": [
+          {
+            "url": "https://example.invalid/arrow.svg",
+            "thumburl": "https://example.invalid/arrow.png",
+            "descriptionurl": "https://example.invalid/wiki-arrow",
+            "width": 100,
+            "height": 100,
+            "mime": "image/svg+xml",
+            "extmetadata": {
+              "LicenseShortName": {"value": "CC BY 4.0"},
+              "LicenseUrl": {"value": "https://creativecommons.org/licenses/by/4.0/"},
+              "Artist": {"value": "Fixture Author"}
+            }
+          }
+        ]
+      }
+    }
+  }
+}
