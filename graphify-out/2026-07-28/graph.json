@@ -46,8 +46,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "resolvestock_cache",
-      "community": 4,
-      "community_name": "test_core.py",
+      "community": 0,
+      "community_name": "SearchQuery",
       "norm_label": "cache.py"
     },
     {
@@ -57,8 +57,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "resolvestock_cache_make_key",
-      "community": 4,
-      "community_name": "test_core.py",
+      "community": 0,
+      "community_name": "SearchQuery",
       "norm_label": "make_key()"
     },
     {
@@ -68,8 +68,8 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "resolvestock_cache_responsecache",
-      "community": 4,
-      "community_name": "test_core.py",
+      "community": 0,
+      "community_name": "SearchQuery",
       "norm_label": "responsecache"
     },
     {
@@ -79,8 +79,8 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "resolvestock_cache_responsecache_init",
-      "community": 4,
-      "community_name": "test_core.py",
+      "community": 0,
+      "community_name": "SearchQuery",
       "norm_label": ".__init__()"
     },
     {
@@ -90,8 +90,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "resolvestock_cache_py_path",
-      "community": 4,
-      "community_name": "test_core.py",
+      "community": 0,
+      "community_name": "SearchQuery",
       "norm_label": "path"
     },
     {
@@ -101,8 +101,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "resolvestock_cache_responsecache_get",
-      "community": 4,
-      "community_name": "test_core.py",
+      "community": 0,
+      "community_name": "SearchQuery",
       "norm_label": ".get()"
     },
     {
@@ -112,8 +112,8 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "resolvestock_cache_responsecache_set",
-      "community": 4,
-      "community_name": "test_core.py",
+      "community": 0,
+      "community_name": "SearchQuery",
       "norm_label": ".set()"
     },
     {
@@ -123,8 +123,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "resolvestock_cache_responsecache_purge_expired",
-      "community": 4,
-      "community_name": "test_core.py",
+      "community": 0,
+      "community_name": "SearchQuery",
       "norm_label": ".purge_expired()"
     },
     {
@@ -134,8 +134,8 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "resolvestock_cache_responsecache_close",
-      "community": 4,
-      "community_name": "test_core.py",
+      "community": 0,
+      "community_name": "SearchQuery",
       "norm_label": ".close()"
     },
     {
@@ -145,8 +145,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "resolvestock_cache_rationale_1",
-      "community": 4,
-      "community_name": "test_core.py",
+      "community": 0,
+      "community_name": "SearchQuery",
       "norm_label": "sqlite response cache. the default 24-hour ttl satisfies pixabay terms."
     },
     {
@@ -157,7 +157,7 @@
       "_origin": "ast",
       "id": "resolvestock_cli",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "cli.py"
     },
     {
@@ -168,7 +168,7 @@
       "_origin": "ast",
       "id": "resolvestock_cli_format_results",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "format_results()"
     },
     {
@@ -179,7 +179,7 @@
       "_origin": "ast",
       "id": "resolvestock_cli_main",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "main()"
     },
     {
@@ -190,7 +190,7 @@
       "_origin": "ast",
       "id": "resolvestock_cli_rationale_1",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "terminal source-layer harness."
     },
     {
@@ -200,8 +200,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "resolvestock_config",
-      "community": 2,
-      "community_name": "test_ui.py",
+      "community": 0,
+      "community_name": "SearchQuery",
       "norm_label": "config.py"
     },
     {
@@ -211,7 +211,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "resolvestock_config_config",
-      "community": 2,
+      "community": 3,
       "community_name": "test_ui.py",
       "norm_label": "config"
     },
@@ -223,7 +223,7 @@
       "_origin": "ast",
       "id": "resolvestock_config_config_load",
       "community": 3,
-      "community_name": "MainWindow",
+      "community_name": "test_ui.py",
       "norm_label": ".load()"
     },
     {
@@ -234,7 +234,7 @@
       "_origin": "ast",
       "id": "resolvestock_config_py_path",
       "community": 3,
-      "community_name": "MainWindow",
+      "community_name": "test_ui.py",
       "norm_label": "path"
     },
     {
@@ -244,7 +244,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "resolvestock_config_config_save",
-      "community": 2,
+      "community": 3,
       "community_name": "test_ui.py",
       "norm_label": ".save()"
     },
@@ -255,8 +255,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "resolvestock_config_rationale_1",
-      "community": 2,
-      "community_name": "test_ui.py",
+      "community": 0,
+      "community_name": "SearchQuery",
       "norm_label": "persistent user settings."
     },
     {
@@ -266,8 +266,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "resolvestock_credits",
-      "community": 1,
-      "community_name": "licenses.py",
+      "community": 4,
+      "community_name": "SearchResult",
       "norm_label": "credits.py"
     },
     {
@@ -277,8 +277,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "resolvestock_credits_build_credits",
-      "community": 1,
-      "community_name": "licenses.py",
+      "community": 4,
+      "community_name": "SearchResult",
       "norm_label": "build_credits()"
     },
     {
@@ -288,8 +288,8 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "resolvestock_credits_write_credits",
-      "community": 1,
-      "community_name": "licenses.py",
+      "community": 4,
+      "community_name": "SearchResult",
       "norm_label": "write_credits()"
     },
     {
@@ -299,8 +299,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "resolvestock_credits_py_path",
-      "community": 1,
-      "community_name": "licenses.py",
+      "community": 4,
+      "community_name": "SearchResult",
       "norm_label": "path"
     },
     {
@@ -310,8 +310,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "resolvestock_credits_rationale_1",
-      "community": 1,
-      "community_name": "licenses.py",
+      "community": 4,
+      "community_name": "SearchResult",
       "norm_label": "attribution credits for downloaded assets."
     },
     {
@@ -322,7 +322,7 @@
       "_origin": "ast",
       "id": "resolvestock_library",
       "community": 4,
-      "community_name": "test_core.py",
+      "community_name": "SearchResult",
       "norm_label": "library.py"
     },
     {
@@ -333,7 +333,7 @@
       "_origin": "ast",
       "id": "resolvestock_library_slugify",
       "community": 4,
-      "community_name": "test_core.py",
+      "community_name": "SearchResult",
       "norm_label": "slugify()"
     },
     {
@@ -344,7 +344,7 @@
       "_origin": "ast",
       "id": "resolvestock_library_library",
       "community": 4,
-      "community_name": "test_core.py",
+      "community_name": "SearchResult",
       "norm_label": "library"
     },
     {
@@ -355,7 +355,7 @@
       "_origin": "ast",
       "id": "resolvestock_library_library_init",
       "community": 4,
-      "community_name": "test_core.py",
+      "community_name": "SearchResult",
       "norm_label": ".__init__()"
     },
     {
@@ -366,7 +366,7 @@
       "_origin": "ast",
       "id": "resolvestock_library_py_path",
       "community": 4,
-      "community_name": "test_core.py",
+      "community_name": "SearchResult",
       "norm_label": "path"
     },
     {
@@ -377,7 +377,7 @@
       "_origin": "ast",
       "id": "resolvestock_library_py_client",
       "community": 4,
-      "community_name": "test_core.py",
+      "community_name": "SearchResult",
       "norm_label": "client"
     },
     {
@@ -388,7 +388,7 @@
       "_origin": "ast",
       "id": "resolvestock_library_library_normalize_filename",
       "community": 4,
-      "community_name": "test_core.py",
+      "community_name": "SearchResult",
       "norm_label": ".normalize_filename()"
     },
     {
@@ -399,7 +399,7 @@
       "_origin": "ast",
       "id": "resolvestock_library_library_sidecar_path",
       "community": 4,
-      "community_name": "test_core.py",
+      "community_name": "SearchResult",
       "norm_label": ".sidecar_path()"
     },
     {
@@ -410,7 +410,7 @@
       "_origin": "ast",
       "id": "resolvestock_library_library_suffix_for",
       "community": 4,
-      "community_name": "test_core.py",
+      "community_name": "SearchResult",
       "norm_label": "._suffix_for()"
     },
     {
@@ -421,7 +421,7 @@
       "_origin": "ast",
       "id": "resolvestock_library_library_download",
       "community": 4,
-      "community_name": "test_core.py",
+      "community_name": "SearchResult",
       "norm_label": ".download()"
     },
     {
@@ -432,7 +432,7 @@
       "_origin": "ast",
       "id": "resolvestock_library_library_read_item",
       "community": 4,
-      "community_name": "test_core.py",
+      "community_name": "SearchResult",
       "norm_label": "._read_item()"
     },
     {
@@ -443,7 +443,7 @@
       "_origin": "ast",
       "id": "resolvestock_library_library_items",
       "community": 4,
-      "community_name": "test_core.py",
+      "community_name": "SearchResult",
       "norm_label": ".items()"
     },
     {
@@ -454,7 +454,7 @@
       "_origin": "ast",
       "id": "resolvestock_library_rationale_1",
       "community": 4,
-      "community_name": "test_core.py",
+      "community_name": "SearchResult",
       "norm_label": "deliberate single-asset downloads with durable provenance sidecars."
     },
     {
@@ -464,8 +464,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "resolvestock_licenses",
-      "community": 1,
-      "community_name": "licenses.py",
+      "community": 4,
+      "community_name": "SearchResult",
       "norm_label": "licenses.py"
     },
     {
@@ -475,8 +475,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "resolvestock_licenses_license",
-      "community": 1,
-      "community_name": "licenses.py",
+      "community": 4,
+      "community_name": "SearchResult",
       "norm_label": "license"
     },
     {
@@ -486,7 +486,7 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "resolvestock_licenses_normalize_license_id",
-      "community": 0,
+      "community": 4,
       "community_name": "SearchResult",
       "norm_label": "normalize_license_id()"
     },
@@ -497,8 +497,8 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "resolvestock_licenses_get_license",
-      "community": 1,
-      "community_name": "licenses.py",
+      "community": 4,
+      "community_name": "SearchResult",
       "norm_label": "get_license()"
     },
     {
@@ -508,8 +508,8 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "resolvestock_licenses_is_commercial_safe",
-      "community": 1,
-      "community_name": "licenses.py",
+      "community": 4,
+      "community_name": "SearchResult",
       "norm_label": "is_commercial_safe()"
     },
     {
@@ -519,8 +519,8 @@
       "source_location": "L84",
       "_origin": "ast",
       "id": "resolvestock_licenses_filter_commercial_safe",
-      "community": 1,
-      "community_name": "licenses.py",
+      "community": 4,
+      "community_name": "SearchResult",
       "norm_label": "filter_commercial_safe()"
     },
     {
@@ -530,8 +530,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "resolvestock_licenses_rationale_1",
-      "community": 1,
-      "community_name": "licenses.py",
+      "community": 4,
+      "community_name": "SearchResult",
       "norm_label": "license identity and conservative commercial-safety rules."
     },
     {
@@ -541,8 +541,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "resolvestock_models",
-      "community": 1,
-      "community_name": "licenses.py",
+      "community": 4,
+      "community_name": "SearchResult",
       "norm_label": "models.py"
     },
     {
@@ -552,7 +552,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "resolvestock_models_searchresult",
-      "community": 0,
+      "community": 4,
       "community_name": "SearchResult",
       "norm_label": "searchresult"
     },
@@ -563,7 +563,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "resolvestock_models_searchresult_uid",
-      "community": 0,
+      "community": 4,
       "community_name": "SearchResult",
       "norm_label": ".uid()"
     },
@@ -575,7 +575,7 @@
       "_origin": "ast",
       "id": "resolvestock_models_libraryitem",
       "community": 4,
-      "community_name": "test_core.py",
+      "community_name": "SearchResult",
       "norm_label": "libraryitem"
     },
     {
@@ -585,8 +585,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "resolvestock_models_rationale_1",
-      "community": 1,
-      "community_name": "licenses.py",
+      "community": 4,
+      "community_name": "SearchResult",
       "norm_label": "core data types shared by every layer."
     },
     {
@@ -619,40 +619,40 @@
       "_origin": "ast",
       "id": "resolvestock_sources_base",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "base.py"
     },
     {
       "label": "SearchQuery",
       "file_type": "code",
       "source_file": "resolvestock/sources/base.py",
-      "source_location": "L15",
+      "source_location": "L18",
       "_origin": "ast",
       "id": "resolvestock_sources_base_searchquery",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "searchquery"
     },
     {
       "label": "CachedHttp",
       "file_type": "code",
       "source_file": "resolvestock/sources/base.py",
-      "source_location": "L24",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "resolvestock_sources_base_cachedhttp",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "cachedhttp"
     },
     {
       "label": ".__init__()",
       "file_type": "code",
       "source_file": "resolvestock/sources/base.py",
-      "source_location": "L25",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "resolvestock_sources_base_cachedhttp_init",
-      "community": 4,
-      "community_name": "test_core.py",
+      "community": 0,
+      "community_name": "SearchQuery",
       "norm_label": ".__init__()"
     },
     {
@@ -662,30 +662,30 @@
       "source_location": "",
       "_origin": "ast",
       "id": "resolvestock_sources_base_py_client",
-      "community": 4,
-      "community_name": "test_core.py",
+      "community": 0,
+      "community_name": "SearchQuery",
       "norm_label": "client"
     },
     {
       "label": ".get_json()",
       "file_type": "code",
       "source_file": "resolvestock/sources/base.py",
-      "source_location": "L34",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "resolvestock_sources_base_cachedhttp_get_json",
-      "community": 4,
-      "community_name": "test_core.py",
+      "community": 0,
+      "community_name": "SearchQuery",
       "norm_label": ".get_json()"
     },
     {
       "label": "Source",
       "file_type": "code",
       "source_file": "resolvestock/sources/base.py",
-      "source_location": "L45",
+      "source_location": "L48",
       "_origin": "ast",
       "id": "resolvestock_sources_base_source",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "source"
     },
     {
@@ -696,18 +696,18 @@
       "_origin": "ast",
       "id": "abc",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "abc"
     },
     {
       "label": ".search()",
       "file_type": "code",
       "source_file": "resolvestock/sources/base.py",
-      "source_location": "L50",
+      "source_location": "L53",
       "_origin": "ast",
       "id": "resolvestock_sources_base_source_search",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": ".search()"
     },
     {
@@ -718,7 +718,7 @@
       "_origin": "ast",
       "id": "resolvestock_sources_base_rationale_1",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "shared source contracts and cached http access."
     },
     {
@@ -729,18 +729,18 @@
       "_origin": "ast",
       "id": "resolvestock_sources_openverse",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "openverse.py"
     },
     {
       "label": "OpenverseSource",
       "file_type": "code",
       "source_file": "resolvestock/sources/openverse.py",
-      "source_location": "L10",
+      "source_location": "L13",
       "_origin": "ast",
       "id": "resolvestock_sources_openverse_openversesource",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "openversesource"
     },
     {
@@ -751,40 +751,40 @@
       "_origin": "ast",
       "id": "resolvestock_sources_openverse_py_source",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "source"
     },
     {
       "label": ".__init__()",
       "file_type": "code",
       "source_file": "resolvestock/sources/openverse.py",
-      "source_location": "L13",
+      "source_location": "L16",
       "_origin": "ast",
       "id": "resolvestock_sources_openverse_openversesource_init",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": ".__init__()"
     },
     {
       "label": ".search()",
       "file_type": "code",
       "source_file": "resolvestock/sources/openverse.py",
-      "source_location": "L16",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "resolvestock_sources_openverse_openversesource_search",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": ".search()"
     },
     {
       "label": ".parse()",
       "file_type": "code",
       "source_file": "resolvestock/sources/openverse.py",
-      "source_location": "L26",
+      "source_location": "L33",
       "_origin": "ast",
       "id": "resolvestock_sources_openverse_openversesource_parse",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": ".parse()"
     },
     {
@@ -795,7 +795,7 @@
       "_origin": "ast",
       "id": "resolvestock_sources_openverse_rationale_1",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "openverse image-search adapter."
     },
     {
@@ -806,7 +806,7 @@
       "_origin": "ast",
       "id": "resolvestock_sources_pixabay",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "pixabay.py"
     },
     {
@@ -817,7 +817,7 @@
       "_origin": "ast",
       "id": "resolvestock_sources_pixabay_pixabaysource",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "pixabaysource"
     },
     {
@@ -828,7 +828,7 @@
       "_origin": "ast",
       "id": "resolvestock_sources_pixabay_py_source",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "source"
     },
     {
@@ -839,7 +839,7 @@
       "_origin": "ast",
       "id": "resolvestock_sources_pixabay_pixabaysource_init",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": ".__init__()"
     },
     {
@@ -850,7 +850,7 @@
       "_origin": "ast",
       "id": "resolvestock_sources_pixabay_pixabaysource_search",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": ".search()"
     },
     {
@@ -861,7 +861,7 @@
       "_origin": "ast",
       "id": "resolvestock_sources_pixabay_pixabaysource_parse",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": ".parse()"
     },
     {
@@ -872,7 +872,7 @@
       "_origin": "ast",
       "id": "resolvestock_sources_pixabay_rationale_1",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "pixabay adapter; searches only, never mass-downloads."
     },
     {
@@ -883,7 +883,7 @@
       "_origin": "ast",
       "id": "resolvestock_sources_registry",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "registry.py"
     },
     {
@@ -894,7 +894,7 @@
       "_origin": "ast",
       "id": "resolvestock_sources_registry_searchoutcome",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "searchoutcome"
     },
     {
@@ -905,7 +905,7 @@
       "_origin": "ast",
       "id": "resolvestock_sources_registry_sourceregistry",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "sourceregistry"
     },
     {
@@ -916,7 +916,7 @@
       "_origin": "ast",
       "id": "resolvestock_sources_registry_sourceregistry_init",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": ".__init__()"
     },
     {
@@ -927,7 +927,7 @@
       "_origin": "ast",
       "id": "resolvestock_sources_registry_py_source",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "source"
     },
     {
@@ -938,7 +938,7 @@
       "_origin": "ast",
       "id": "resolvestock_sources_registry_sourceregistry_search",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": ".search()"
     },
     {
@@ -949,7 +949,7 @@
       "_origin": "ast",
       "id": "resolvestock_sources_registry_build_registry",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "build_registry()"
     },
     {
@@ -960,7 +960,7 @@
       "_origin": "ast",
       "id": "resolvestock_sources_registry_rationale_1",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "fault-tolerant fan-out across configured sources."
     },
     {
@@ -971,7 +971,7 @@
       "_origin": "ast",
       "id": "resolvestock_sources_wikimedia",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "wikimedia.py"
     },
     {
@@ -982,7 +982,7 @@
       "_origin": "ast",
       "id": "resolvestock_sources_wikimedia_strip_html",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "strip_html()"
     },
     {
@@ -993,7 +993,7 @@
       "_origin": "ast",
       "id": "resolvestock_sources_wikimedia_wikimediasource",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "wikimediasource"
     },
     {
@@ -1004,7 +1004,7 @@
       "_origin": "ast",
       "id": "resolvestock_sources_wikimedia_py_source",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "source"
     },
     {
@@ -1015,7 +1015,7 @@
       "_origin": "ast",
       "id": "resolvestock_sources_wikimedia_wikimediasource_init",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": ".__init__()"
     },
     {
@@ -1026,7 +1026,7 @@
       "_origin": "ast",
       "id": "resolvestock_sources_wikimedia_wikimediasource_search",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": ".search()"
     },
     {
@@ -1037,7 +1037,7 @@
       "_origin": "ast",
       "id": "resolvestock_sources_wikimedia_wikimediasource_parse",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": ".parse()"
     },
     {
@@ -1048,7 +1048,7 @@
       "_origin": "ast",
       "id": "resolvestock_sources_wikimedia_rationale_1",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "wikimedia commons adapter."
     },
     {
@@ -1080,8 +1080,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "resolvestock_ui_app",
-      "community": 4,
-      "community_name": "test_core.py",
+      "community": 0,
+      "community_name": "SearchQuery",
       "norm_label": "app.py"
     },
     {
@@ -1091,8 +1091,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "resolvestock_ui_app_main",
-      "community": 3,
-      "community_name": "MainWindow",
+      "community": 0,
+      "community_name": "SearchQuery",
       "norm_label": "main()"
     },
     {
@@ -1102,8 +1102,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "resolvestock_ui_app_rationale_1",
-      "community": 4,
-      "community_name": "test_core.py",
+      "community": 0,
+      "community_name": "SearchQuery",
       "norm_label": "desktop application entry point."
     },
     {
@@ -1113,8 +1113,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "resolvestock_ui_grid",
-      "community": 1,
-      "community_name": "licenses.py",
+      "community": 4,
+      "community_name": "SearchResult",
       "norm_label": "grid.py"
     },
     {
@@ -1124,7 +1124,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_thumbnailfetcher",
-      "community": 8,
+      "community": 2,
       "community_name": "ThumbnailFetcher",
       "norm_label": "thumbnailfetcher"
     },
@@ -1135,7 +1135,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_thumbnailfetcher_init",
-      "community": 8,
+      "community": 2,
       "community_name": "ThumbnailFetcher",
       "norm_label": ".__init__()"
     },
@@ -1146,7 +1146,7 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_thumbnailfetcher_fetch",
-      "community": 8,
+      "community": 2,
       "community_name": "ThumbnailFetcher",
       "norm_label": ".fetch()"
     },
@@ -1157,7 +1157,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_thumbnailfetcher_close",
-      "community": 8,
+      "community": 2,
       "community_name": "ThumbnailFetcher",
       "norm_label": ".close()"
     },
@@ -1168,7 +1168,7 @@
       "source_location": "L72",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_thumbnailfetcher_state",
-      "community": 8,
+      "community": 2,
       "community_name": "ThumbnailFetcher",
       "norm_label": "._state()"
     },
@@ -1179,7 +1179,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_thumbnailfetcher_wait_for_turn",
-      "community": 8,
+      "community": 2,
       "community_name": "ThumbnailFetcher",
       "norm_label": "._wait_for_turn()"
     },
@@ -1190,7 +1190,7 @@
       "source_location": "L85",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_thumbnailfetcher_throttle",
-      "community": 8,
+      "community": 2,
       "community_name": "ThumbnailFetcher",
       "norm_label": "._throttle()"
     },
@@ -1201,7 +1201,7 @@
       "source_location": "L96",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_thumbnailfetcher_relax",
-      "community": 8,
+      "community": 2,
       "community_name": "ThumbnailFetcher",
       "norm_label": "._relax()"
     },
@@ -1212,7 +1212,7 @@
       "source_location": "L102",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_thumbnailfetcher_retry_after",
-      "community": 8,
+      "community": 2,
       "community_name": "ThumbnailFetcher",
       "norm_label": "._retry_after()"
     },
@@ -1223,8 +1223,8 @@
       "source_location": "L110",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_thumbnailsignals",
-      "community": 2,
-      "community_name": "test_ui.py",
+      "community": 8,
+      "community_name": "_ThumbnailJob",
       "norm_label": "_thumbnailsignals"
     },
     {
@@ -1234,8 +1234,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_py_qobject",
-      "community": 2,
-      "community_name": "test_ui.py",
+      "community": 8,
+      "community_name": "_ThumbnailJob",
       "norm_label": "qobject"
     },
     {
@@ -1246,7 +1246,7 @@
       "_origin": "ast",
       "id": "resolvestock_ui_grid_thumbnailjob",
       "community": 8,
-      "community_name": "ThumbnailFetcher",
+      "community_name": "_ThumbnailJob",
       "norm_label": "_thumbnailjob"
     },
     {
@@ -1257,7 +1257,7 @@
       "_origin": "ast",
       "id": "resolvestock_ui_grid_py_qrunnable",
       "community": 8,
-      "community_name": "ThumbnailFetcher",
+      "community_name": "_ThumbnailJob",
       "norm_label": "qrunnable"
     },
     {
@@ -1267,8 +1267,8 @@
       "source_location": "L116",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_thumbnailjob_init",
-      "community": 2,
-      "community_name": "test_ui.py",
+      "community": 8,
+      "community_name": "_ThumbnailJob",
       "norm_label": ".__init__()"
     },
     {
@@ -1279,7 +1279,7 @@
       "_origin": "ast",
       "id": "resolvestock_ui_grid_thumbnailjob_run",
       "community": 8,
-      "community_name": "ThumbnailFetcher",
+      "community_name": "_ThumbnailJob",
       "norm_label": ".run()"
     },
     {
@@ -1289,7 +1289,7 @@
       "source_location": "L135",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_thumbnailloader",
-      "community": 2,
+      "community": 3,
       "community_name": "test_ui.py",
       "norm_label": "thumbnailloader"
     },
@@ -1300,8 +1300,8 @@
       "source_location": "L136",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_thumbnailloader_init",
-      "community": 2,
-      "community_name": "test_ui.py",
+      "community": 8,
+      "community_name": "_ThumbnailJob",
       "norm_label": ".__init__()"
     },
     {
@@ -1311,52 +1311,63 @@
       "source_location": "L145",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_thumbnailloader_begin_generation",
-      "community": 8,
-      "community_name": "ThumbnailFetcher",
+      "community": 1,
+      "community_name": "ResultsGrid",
       "norm_label": ".begin_generation()"
+    },
+    {
+      "label": ".stop()",
+      "file_type": "code",
+      "source_file": "resolvestock/ui/grid.py",
+      "source_location": "L150",
+      "_origin": "ast",
+      "id": "resolvestock_ui_grid_thumbnailloader_stop",
+      "community": 1,
+      "community_name": "ResultsGrid",
+      "norm_label": ".stop()"
     },
     {
       "label": ".is_current()",
       "file_type": "code",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L150",
+      "source_location": "L159",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_thumbnailloader_is_current",
       "community": 8,
-      "community_name": "ThumbnailFetcher",
+      "community_name": "_ThumbnailJob",
       "norm_label": ".is_current()"
     },
     {
       "label": ".load()",
       "file_type": "code",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L153",
+      "source_location": "L162",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_thumbnailloader_load",
       "community": 8,
-      "community_name": "ThumbnailFetcher",
+      "community_name": "_ThumbnailJob",
       "norm_label": ".load()"
     },
     {
       "label": ".retire()",
       "file_type": "code",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L158",
+      "source_location": "L167",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_thumbnailloader_retire",
       "community": 8,
-      "community_name": "ThumbnailFetcher",
+      "community_name": "_ThumbnailJob",
       "norm_label": ".retire()"
     },
     {
       "label": "ResultsGrid",
       "file_type": "code",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L162",
+      "source_location": "L171",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_resultsgrid",
-      "community": 2,
-      "community_name": "test_ui.py",
+      "community": 1,
+      "community_name": "ResultsGrid",
       "norm_label": "resultsgrid"
     },
     {
@@ -1366,96 +1377,96 @@
       "source_location": "",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_py_qlistwidget",
-      "community": 2,
-      "community_name": "test_ui.py",
+      "community": 1,
+      "community_name": "ResultsGrid",
       "norm_label": "qlistwidget"
     },
     {
       "label": ".__init__()",
       "file_type": "code",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L165",
+      "source_location": "L174",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_resultsgrid_init",
-      "community": 2,
-      "community_name": "test_ui.py",
+      "community": 8,
+      "community_name": "_ThumbnailJob",
       "norm_label": ".__init__()"
     },
     {
       "label": ".set_results()",
       "file_type": "code",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L181",
+      "source_location": "L190",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_resultsgrid_set_results",
-      "community": 8,
-      "community_name": "ThumbnailFetcher",
+      "community": 1,
+      "community_name": "ResultsGrid",
       "norm_label": ".set_results()"
     },
     {
       "label": ".results()",
       "file_type": "code",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L211",
+      "source_location": "L220",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_resultsgrid_results",
-      "community": 2,
-      "community_name": "test_ui.py",
+      "community": 1,
+      "community_name": "ResultsGrid",
       "norm_label": ".results()"
     },
     {
       "label": "._apply_thumbnail()",
       "file_type": "code",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L217",
+      "source_location": "L226",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_resultsgrid_apply_thumbnail",
-      "community": 2,
-      "community_name": "test_ui.py",
+      "community": 1,
+      "community_name": "ResultsGrid",
       "norm_label": "._apply_thumbnail()"
     },
     {
       "label": "._mark_thumbnail_failed()",
       "file_type": "code",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L227",
+      "source_location": "L236",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_resultsgrid_mark_thumbnail_failed",
-      "community": 2,
-      "community_name": "test_ui.py",
+      "community": 1,
+      "community_name": "ResultsGrid",
       "norm_label": "._mark_thumbnail_failed()"
     },
     {
       "label": "._mark_entry_failed()",
       "file_type": "code",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L231",
+      "source_location": "L240",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_resultsgrid_mark_entry_failed",
-      "community": 8,
-      "community_name": "ThumbnailFetcher",
+      "community": 1,
+      "community_name": "ResultsGrid",
       "norm_label": "._mark_entry_failed()"
     },
     {
       "label": "._emit_download()",
       "file_type": "code",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L234",
+      "source_location": "L243",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_resultsgrid_emit_download",
-      "community": 2,
-      "community_name": "test_ui.py",
+      "community": 1,
+      "community_name": "ResultsGrid",
       "norm_label": "._emit_download()"
     },
     {
       "label": "pixmap_from_bytes()",
       "file_type": "code",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L239",
+      "source_location": "L248",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_pixmap_from_bytes",
-      "community": 2,
-      "community_name": "test_ui.py",
+      "community": 1,
+      "community_name": "ResultsGrid",
       "norm_label": "pixmap_from_bytes()"
     },
     {
@@ -1465,8 +1476,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "qpixmap",
-      "community": 3,
-      "community_name": "MainWindow",
+      "community": 1,
+      "community_name": "ResultsGrid",
       "norm_label": "qpixmap"
     },
     {
@@ -1476,8 +1487,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_rationale_1",
-      "community": 1,
-      "community_name": "licenses.py",
+      "community": 4,
+      "community_name": "SearchResult",
       "norm_label": "remote search grid with asynchronous thumbnails."
     },
     {
@@ -1487,7 +1498,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_rationale_24",
-      "community": 8,
+      "community": 2,
       "community_name": "ThumbnailFetcher",
       "norm_label": "fetch previews at a pace the image cdns tolerate. a search asks for dozens of..."
     },
@@ -1498,19 +1509,30 @@
       "source_location": "L146",
       "_origin": "ast",
       "id": "resolvestock_ui_grid_rationale_146",
-      "community": 8,
-      "community_name": "ThumbnailFetcher",
+      "community": 1,
+      "community_name": "ResultsGrid",
       "norm_label": "invalidate jobs queued for the previous search."
+    },
+    {
+      "label": "Abandon outstanding previews. QThreadPool waits for its whole backlog on\u2026",
+      "file_type": "rationale",
+      "source_file": "resolvestock/ui/grid.py",
+      "source_location": "L151",
+      "_origin": "ast",
+      "id": "resolvestock_ui_grid_rationale_151",
+      "community": 1,
+      "community_name": "ResultsGrid",
+      "norm_label": "abandon outstanding previews. qthreadpool waits for its whole backlog on..."
     },
     {
       "label": "Decode raster previews and render SVG previews Qt cannot load directly.",
       "file_type": "rationale",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L240",
+      "source_location": "L249",
       "_origin": "ast",
-      "id": "resolvestock_ui_grid_rationale_240",
-      "community": 2,
-      "community_name": "test_ui.py",
+      "id": "resolvestock_ui_grid_rationale_249",
+      "community": 1,
+      "community_name": "ResultsGrid",
       "norm_label": "decode raster previews and render svg previews qt cannot load directly."
     },
     {
@@ -1520,8 +1542,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "resolvestock_ui_main_window",
-      "community": 1,
-      "community_name": "licenses.py",
+      "community": 4,
+      "community_name": "SearchResult",
       "norm_label": "main_window.py"
     },
     {
@@ -1531,8 +1553,8 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "resolvestock_ui_main_window_downloadsignals",
-      "community": 3,
-      "community_name": "MainWindow",
+      "community": 1,
+      "community_name": "ResultsGrid",
       "norm_label": "_downloadsignals"
     },
     {
@@ -1542,8 +1564,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "resolvestock_ui_main_window_py_qobject",
-      "community": 3,
-      "community_name": "MainWindow",
+      "community": 1,
+      "community_name": "ResultsGrid",
       "norm_label": "qobject"
     },
     {
@@ -1553,8 +1575,8 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "resolvestock_ui_main_window_downloadjob",
-      "community": 3,
-      "community_name": "MainWindow",
+      "community": 1,
+      "community_name": "ResultsGrid",
       "norm_label": "_downloadjob"
     },
     {
@@ -1564,8 +1586,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "resolvestock_ui_main_window_py_qrunnable",
-      "community": 3,
-      "community_name": "MainWindow",
+      "community": 1,
+      "community_name": "ResultsGrid",
       "norm_label": "qrunnable"
     },
     {
@@ -1575,8 +1597,8 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "resolvestock_ui_main_window_downloadjob_init",
-      "community": 3,
-      "community_name": "MainWindow",
+      "community": 1,
+      "community_name": "ResultsGrid",
       "norm_label": ".__init__()"
     },
     {
@@ -1586,8 +1608,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "resolvestock_ui_main_window_downloadjob_run",
-      "community": 3,
-      "community_name": "MainWindow",
+      "community": 1,
+      "community_name": "ResultsGrid",
       "norm_label": ".run()"
     },
     {
@@ -1598,7 +1620,7 @@
       "_origin": "ast",
       "id": "resolvestock_ui_main_window_mainwindow",
       "community": 3,
-      "community_name": "MainWindow",
+      "community_name": "test_ui.py",
       "norm_label": "mainwindow"
     },
     {
@@ -1609,7 +1631,7 @@
       "_origin": "ast",
       "id": "qmainwindow",
       "community": 3,
-      "community_name": "MainWindow",
+      "community_name": "test_ui.py",
       "norm_label": "qmainwindow"
     },
     {
@@ -1620,73 +1642,84 @@
       "_origin": "ast",
       "id": "resolvestock_ui_main_window_mainwindow_init",
       "community": 3,
-      "community_name": "MainWindow",
+      "community_name": "test_ui.py",
       "norm_label": ".__init__()"
+    },
+    {
+      "label": ".closeEvent()",
+      "file_type": "code",
+      "source_file": "resolvestock/ui/main_window.py",
+      "source_location": "L110",
+      "_origin": "ast",
+      "id": "resolvestock_ui_main_window_mainwindow_closeevent",
+      "community": 3,
+      "community_name": "test_ui.py",
+      "norm_label": ".closeevent()"
     },
     {
       "label": ".build_query()",
       "file_type": "code",
       "source_file": "resolvestock/ui/main_window.py",
-      "source_location": "L110",
+      "source_location": "L114",
       "_origin": "ast",
       "id": "resolvestock_ui_main_window_mainwindow_build_query",
       "community": 3,
-      "community_name": "MainWindow",
+      "community_name": "test_ui.py",
       "norm_label": ".build_query()"
     },
     {
       "label": ".run_search()",
       "file_type": "code",
       "source_file": "resolvestock/ui/main_window.py",
-      "source_location": "L118",
+      "source_location": "L122",
       "_origin": "ast",
       "id": "resolvestock_ui_main_window_mainwindow_run_search",
       "community": 3,
-      "community_name": "MainWindow",
+      "community_name": "test_ui.py",
       "norm_label": ".run_search()"
     },
     {
       "label": ".download()",
       "file_type": "code",
       "source_file": "resolvestock/ui/main_window.py",
-      "source_location": "L132",
+      "source_location": "L136",
       "_origin": "ast",
       "id": "resolvestock_ui_main_window_mainwindow_download",
-      "community": 3,
-      "community_name": "MainWindow",
+      "community": 1,
+      "community_name": "ResultsGrid",
       "norm_label": ".download()"
     },
     {
       "label": "._on_download_finished()",
       "file_type": "code",
       "source_file": "resolvestock/ui/main_window.py",
-      "source_location": "L153",
+      "source_location": "L157",
       "_origin": "ast",
       "id": "resolvestock_ui_main_window_mainwindow_on_download_finished",
       "community": 3,
-      "community_name": "MainWindow",
+      "community_name": "test_ui.py",
       "norm_label": "._on_download_finished()"
     },
     {
       "label": ".refresh_tray()",
       "file_type": "code",
       "source_file": "resolvestock/ui/main_window.py",
-      "source_location": "L157",
+      "source_location": "L161",
       "_origin": "ast",
       "id": "resolvestock_ui_main_window_mainwindow_refresh_tray",
       "community": 3,
-      "community_name": "MainWindow",
+      "community_name": "test_ui.py",
       "norm_label": ".refresh_tray()"
     },
     {
       "label": ".export_credits()",
       "file_type": "code",
       "source_file": "resolvestock/ui/main_window.py",
-      "source_location": "L160",
+      "source_location": "L164",
       "_origin": "ast",
       "id": "resolvestock_ui_main_window_mainwindow_export_credits",
-      "community": 3,
-      "community_name": "MainWindow",
+      "community": 7,
+      "community_name": ".export_credits",
       "norm_label": ".export_credits()"
     },
     {
@@ -1696,19 +1729,19 @@
       "source_location": "",
       "_origin": "ast",
       "id": "resolvestock_ui_main_window_py_path",
-      "community": 3,
-      "community_name": "MainWindow",
+      "community": 7,
+      "community_name": ".export_credits",
       "norm_label": "path"
     },
     {
       "label": "._prompt_export_credits()",
       "file_type": "code",
       "source_file": "resolvestock/ui/main_window.py",
-      "source_location": "L163",
+      "source_location": "L167",
       "_origin": "ast",
       "id": "resolvestock_ui_main_window_mainwindow_prompt_export_credits",
-      "community": 3,
-      "community_name": "MainWindow",
+      "community": 7,
+      "community_name": ".export_credits",
       "norm_label": "._prompt_export_credits()"
     },
     {
@@ -1718,8 +1751,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "resolvestock_ui_main_window_rationale_1",
-      "community": 1,
-      "community_name": "licenses.py",
+      "community": 4,
+      "community_name": "SearchResult",
       "norm_label": "main search, download, provenance, and drag workflow."
     },
     {
@@ -1729,8 +1762,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "resolvestock_ui_tray",
-      "community": 1,
-      "community_name": "licenses.py",
+      "community": 4,
+      "community_name": "SearchResult",
       "norm_label": "tray.py"
     },
     {
@@ -1741,7 +1774,7 @@
       "_origin": "ast",
       "id": "resolvestock_ui_tray_librarytray",
       "community": 3,
-      "community_name": "MainWindow",
+      "community_name": "test_ui.py",
       "norm_label": "librarytray"
     },
     {
@@ -1752,7 +1785,7 @@
       "_origin": "ast",
       "id": "resolvestock_ui_tray_py_qlistwidget",
       "community": 3,
-      "community_name": "MainWindow",
+      "community_name": "test_ui.py",
       "norm_label": "qlistwidget"
     },
     {
@@ -1763,7 +1796,7 @@
       "_origin": "ast",
       "id": "resolvestock_ui_tray_librarytray_init",
       "community": 3,
-      "community_name": "MainWindow",
+      "community_name": "test_ui.py",
       "norm_label": ".__init__()"
     },
     {
@@ -1773,8 +1806,8 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "resolvestock_ui_tray_librarytray_set_items",
-      "community": 3,
-      "community_name": "MainWindow",
+      "community": 1,
+      "community_name": "ResultsGrid",
       "norm_label": ".set_items()"
     },
     {
@@ -1785,7 +1818,7 @@
       "_origin": "ast",
       "id": "resolvestock_ui_tray_librarytray_selected_paths",
       "community": 3,
-      "community_name": "MainWindow",
+      "community_name": "test_ui.py",
       "norm_label": ".selected_paths()"
     },
     {
@@ -1796,7 +1829,7 @@
       "_origin": "ast",
       "id": "resolvestock_ui_tray_py_path",
       "community": 3,
-      "community_name": "MainWindow",
+      "community_name": "test_ui.py",
       "norm_label": "path"
     },
     {
@@ -1807,7 +1840,7 @@
       "_origin": "ast",
       "id": "resolvestock_ui_tray_librarytray_mimedata",
       "community": 3,
-      "community_name": "MainWindow",
+      "community_name": "test_ui.py",
       "norm_label": ".mimedata()"
     },
     {
@@ -1818,7 +1851,7 @@
       "_origin": "ast",
       "id": "qmimedata",
       "community": 3,
-      "community_name": "MainWindow",
+      "community_name": "test_ui.py",
       "norm_label": "qmimedata"
     },
     {
@@ -1829,7 +1862,7 @@
       "_origin": "ast",
       "id": "resolvestock_ui_tray_librarytray_startdrag",
       "community": 3,
-      "community_name": "MainWindow",
+      "community_name": "test_ui.py",
       "norm_label": ".startdrag()"
     },
     {
@@ -1839,8 +1872,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "resolvestock_ui_tray_rationale_1",
-      "community": 1,
-      "community_name": "licenses.py",
+      "community": 4,
+      "community_name": "SearchResult",
       "norm_label": "local library tray: the only drag source, always copyaction."
     },
     {
@@ -1851,51 +1884,73 @@
       "_origin": "ast",
       "id": "tests_test_adapters",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "test_adapters.py"
+    },
+    {
+      "label": "test_openverse_keeps_page_size_within_the_anonymous_limit()",
+      "file_type": "code",
+      "source_file": "tests/test_adapters.py",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "tests_test_adapters_test_openverse_keeps_page_size_within_the_anonymous_limit",
+      "community": 0,
+      "community_name": "SearchQuery",
+      "norm_label": "test_openverse_keeps_page_size_within_the_anonymous_limit()"
+    },
+    {
+      "label": "test_user_agent_identifies_the_tool_and_a_way_to_reach_it()",
+      "file_type": "code",
+      "source_file": "tests/test_adapters.py",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "tests_test_adapters_test_user_agent_identifies_the_tool_and_a_way_to_reach_it",
+      "community": 0,
+      "community_name": "SearchQuery",
+      "norm_label": "test_user_agent_identifies_the_tool_and_a_way_to_reach_it()"
     },
     {
       "label": "source()",
       "file_type": "code",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L14",
+      "source_location": "L40",
       "_origin": "ast",
       "id": "tests_test_adapters_source",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "source()"
     },
     {
       "label": "test_openverse_normalizes_svg_and_attribution()",
       "file_type": "code",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L24",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "tests_test_adapters_test_openverse_normalizes_svg_and_attribution",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "test_openverse_normalizes_svg_and_attribution()"
     },
     {
       "label": "test_wikimedia_reads_extmetadata()",
       "file_type": "code",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L31",
+      "source_location": "L57",
       "_origin": "ast",
       "id": "tests_test_adapters_test_wikimedia_reads_extmetadata",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "test_wikimedia_reads_extmetadata()"
     },
     {
       "label": "test_pixabay_uses_largest_asset_and_transparent_filter()",
       "file_type": "code",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L37",
+      "source_location": "L63",
       "_origin": "ast",
       "id": "tests_test_adapters_test_pixabay_uses_largest_asset_and_transparent_filter",
       "community": 0,
-      "community_name": "SearchResult",
+      "community_name": "SearchQuery",
       "norm_label": "test_pixabay_uses_largest_asset_and_transparent_filter()"
     },
     {
@@ -1906,7 +1961,7 @@
       "_origin": "ast",
       "id": "tests_test_core",
       "community": 4,
-      "community_name": "test_core.py",
+      "community_name": "SearchResult",
       "norm_label": "test_core.py"
     },
     {
@@ -1917,7 +1972,7 @@
       "_origin": "ast",
       "id": "tests_test_core_result",
       "community": 4,
-      "community_name": "test_core.py",
+      "community_name": "SearchResult",
       "norm_label": "result()"
     },
     {
@@ -1927,7 +1982,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "tests_test_core_test_license_normalization_and_safety",
-      "community": 0,
+      "community": 4,
       "community_name": "SearchResult",
       "norm_label": "test_license_normalization_and_safety()"
     },
@@ -1938,8 +1993,8 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "tests_test_core_test_cache_hides_secrets_and_round_trips",
-      "community": 4,
-      "community_name": "test_core.py",
+      "community": 0,
+      "community_name": "SearchQuery",
       "norm_label": "test_cache_hides_secrets_and_round_trips()"
     },
     {
@@ -1949,8 +2004,8 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "tests_test_core_test_cached_http_does_not_repeat_successful_request",
-      "community": 4,
-      "community_name": "test_core.py",
+      "community": 0,
+      "community_name": "SearchQuery",
       "norm_label": "test_cached_http_does_not_repeat_successful_request()"
     },
     {
@@ -1961,7 +2016,7 @@
       "_origin": "ast",
       "id": "tests_test_core_test_library_writes_asset_and_provenance",
       "community": 4,
-      "community_name": "test_core.py",
+      "community_name": "SearchResult",
       "norm_label": "test_library_writes_asset_and_provenance()"
     },
     {
@@ -1972,7 +2027,7 @@
       "_origin": "ast",
       "id": "tests_test_core_test_credits_omits_cc0_and_includes_attribution_required_assets",
       "community": 4,
-      "community_name": "test_core.py",
+      "community_name": "SearchResult",
       "norm_label": "test_credits_omits_cc0_and_includes_attribution_required_assets()"
     },
     {
@@ -1983,7 +2038,7 @@
       "_origin": "ast",
       "id": "tests_test_core_source",
       "community": 4,
-      "community_name": "test_core.py",
+      "community_name": "SearchResult",
       "norm_label": "_source"
     },
     {
@@ -1994,7 +2049,7 @@
       "_origin": "ast",
       "id": "tests_test_core_source_init",
       "community": 4,
-      "community_name": "test_core.py",
+      "community_name": "SearchResult",
       "norm_label": ".__init__()"
     },
     {
@@ -2005,7 +2060,7 @@
       "_origin": "ast",
       "id": "tests_test_core_source_search",
       "community": 4,
-      "community_name": "test_core.py",
+      "community_name": "SearchResult",
       "norm_label": ".search()"
     },
     {
@@ -2016,7 +2071,7 @@
       "_origin": "ast",
       "id": "tests_test_core_test_registry_interleaves_deduplicates_and_keeps_source_failures",
       "community": 4,
-      "community_name": "test_core.py",
+      "community_name": "SearchResult",
       "norm_label": "test_registry_interleaves_deduplicates_and_keeps_source_failures()"
     },
     {
@@ -2026,7 +2081,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_ui",
-      "community": 2,
+      "community": 3,
       "community_name": "test_ui.py",
       "norm_label": "test_ui.py"
     },
@@ -2037,7 +2092,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "fixture",
-      "community": 2,
+      "community": 3,
       "community_name": "test_ui.py",
       "norm_label": "fixture"
     },
@@ -2048,7 +2103,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "tests_test_ui_app",
-      "community": 2,
+      "community": 3,
       "community_name": "test_ui.py",
       "norm_label": "app()"
     },
@@ -2059,7 +2114,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "tests_test_ui_make_result",
-      "community": 2,
+      "community": 3,
       "community_name": "test_ui.py",
       "norm_label": "make_result()"
     },
@@ -2070,7 +2125,7 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "tests_test_ui_make_item",
-      "community": 2,
+      "community": 3,
       "community_name": "test_ui.py",
       "norm_label": "make_item()"
     },
@@ -2081,7 +2136,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "tests_test_ui_test_tray_drag_carries_only_local_file_urls",
-      "community": 2,
+      "community": 3,
       "community_name": "test_ui.py",
       "norm_label": "test_tray_drag_carries_only_local_file_urls()"
     },
@@ -2092,7 +2147,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "tests_test_ui_test_grid_is_not_a_drag_source_and_emits_downloads",
-      "community": 2,
+      "community": 3,
       "community_name": "test_ui.py",
       "norm_label": "test_grid_is_not_a_drag_source_and_emits_downloads()"
     },
@@ -2103,7 +2158,7 @@
       "source_location": "L79",
       "_origin": "ast",
       "id": "tests_test_ui_test_grid_renders_svg_previews_and_marks_bad_previews",
-      "community": 2,
+      "community": 3,
       "community_name": "test_ui.py",
       "norm_label": "test_grid_renders_svg_previews_and_marks_bad_previews()"
     },
@@ -2115,7 +2170,7 @@
       "_origin": "ast",
       "id": "tests_test_ui_fakeclock",
       "community": 2,
-      "community_name": "test_ui.py",
+      "community_name": "ThumbnailFetcher",
       "norm_label": "fakeclock"
     },
     {
@@ -2126,7 +2181,7 @@
       "_origin": "ast",
       "id": "tests_test_ui_fakeclock_init",
       "community": 2,
-      "community_name": "test_ui.py",
+      "community_name": "ThumbnailFetcher",
       "norm_label": ".__init__()"
     },
     {
@@ -2136,8 +2191,8 @@
       "source_location": "L99",
       "_origin": "ast",
       "id": "tests_test_ui_fakeclock_sleep",
-      "community": 3,
-      "community_name": "MainWindow",
+      "community": 2,
+      "community_name": "ThumbnailFetcher",
       "norm_label": ".sleep()"
     },
     {
@@ -2147,8 +2202,8 @@
       "source_location": "L103",
       "_origin": "ast",
       "id": "tests_test_ui_fakeclock_monotonic",
-      "community": 3,
-      "community_name": "MainWindow",
+      "community": 2,
+      "community_name": "ThumbnailFetcher",
       "norm_label": ".monotonic()"
     },
     {
@@ -2158,7 +2213,7 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "tests_test_ui_manualpool",
-      "community": 2,
+      "community": 3,
       "community_name": "test_ui.py",
       "norm_label": "manualpool"
     },
@@ -2169,7 +2224,7 @@
       "source_location": "L110",
       "_origin": "ast",
       "id": "tests_test_ui_manualpool_init",
-      "community": 2,
+      "community": 3,
       "community_name": "test_ui.py",
       "norm_label": ".__init__()"
     },
@@ -2180,7 +2235,7 @@
       "source_location": "L113",
       "_origin": "ast",
       "id": "tests_test_ui_manualpool_setmaxthreadcount",
-      "community": 2,
+      "community": 3,
       "community_name": "test_ui.py",
       "norm_label": ".setmaxthreadcount()"
     },
@@ -2191,7 +2246,7 @@
       "source_location": "L116",
       "_origin": "ast",
       "id": "tests_test_ui_manualpool_start",
-      "community": 2,
+      "community": 3,
       "community_name": "test_ui.py",
       "norm_label": ".start()"
     },
@@ -2202,7 +2257,7 @@
       "source_location": "L119",
       "_origin": "ast",
       "id": "tests_test_ui_manualpool_run_all",
-      "community": 2,
+      "community": 3,
       "community_name": "test_ui.py",
       "norm_label": ".run_all()"
     },
@@ -2213,7 +2268,7 @@
       "source_location": "L125",
       "_origin": "ast",
       "id": "tests_test_ui_recordingfetcher",
-      "community": 2,
+      "community": 3,
       "community_name": "test_ui.py",
       "norm_label": "recordingfetcher"
     },
@@ -2224,7 +2279,7 @@
       "source_location": "L126",
       "_origin": "ast",
       "id": "tests_test_ui_recordingfetcher_init",
-      "community": 2,
+      "community": 3,
       "community_name": "test_ui.py",
       "norm_label": ".__init__()"
     },
@@ -2236,7 +2291,7 @@
       "_origin": "ast",
       "id": "tests_test_ui_recordingfetcher_fetch",
       "community": 2,
-      "community_name": "test_ui.py",
+      "community_name": "ThumbnailFetcher",
       "norm_label": ".fetch()"
     },
     {
@@ -2247,7 +2302,7 @@
       "_origin": "ast",
       "id": "tests_test_ui_build_fetcher",
       "community": 2,
-      "community_name": "test_ui.py",
+      "community_name": "ThumbnailFetcher",
       "norm_label": "build_fetcher()"
     },
     {
@@ -2258,7 +2313,7 @@
       "_origin": "ast",
       "id": "tests_test_ui_test_thumbnail_fetcher_retries_when_the_host_rate_limits",
       "community": 2,
-      "community_name": "test_ui.py",
+      "community_name": "ThumbnailFetcher",
       "norm_label": "test_thumbnail_fetcher_retries_when_the_host_rate_limits()"
     },
     {
@@ -2269,7 +2324,7 @@
       "_origin": "ast",
       "id": "tests_test_ui_test_thumbnail_fetcher_reports_failure_after_exhausting_retries",
       "community": 2,
-      "community_name": "test_ui.py",
+      "community_name": "ThumbnailFetcher",
       "norm_label": "test_thumbnail_fetcher_reports_failure_after_exhausting_retries()"
     },
     {
@@ -2280,7 +2335,7 @@
       "_origin": "ast",
       "id": "tests_test_ui_test_thumbnail_fetcher_paces_requests_to_the_same_host",
       "community": 2,
-      "community_name": "test_ui.py",
+      "community_name": "ThumbnailFetcher",
       "norm_label": "test_thumbnail_fetcher_paces_requests_to_the_same_host()"
     },
     {
@@ -2291,7 +2346,7 @@
       "_origin": "ast",
       "id": "tests_test_ui_test_thumbnail_fetcher_paces_hosts_independently",
       "community": 2,
-      "community_name": "test_ui.py",
+      "community_name": "ThumbnailFetcher",
       "norm_label": "test_thumbnail_fetcher_paces_hosts_independently()"
     },
     {
@@ -2302,7 +2357,7 @@
       "_origin": "ast",
       "id": "tests_test_ui_test_thumbnail_fetcher_backs_the_whole_host_off_after_a_429",
       "community": 2,
-      "community_name": "test_ui.py",
+      "community_name": "ThumbnailFetcher",
       "norm_label": "test_thumbnail_fetcher_backs_the_whole_host_off_after_a_429()"
     },
     {
@@ -2312,7 +2367,7 @@
       "source_location": "L208",
       "_origin": "ast",
       "id": "tests_test_ui_test_thumbnail_loader_drops_jobs_from_a_superseded_search",
-      "community": 2,
+      "community": 3,
       "community_name": "test_ui.py",
       "norm_label": "test_thumbnail_loader_drops_jobs_from_a_superseded_search()"
     },
@@ -2323,18 +2378,40 @@
       "source_location": "L219",
       "_origin": "ast",
       "id": "tests_test_ui_test_thumbnail_loader_keeps_jobs_alive_until_they_finish",
-      "community": 2,
+      "community": 3,
       "community_name": "test_ui.py",
       "norm_label": "test_thumbnail_loader_keeps_jobs_alive_until_they_finish()"
+    },
+    {
+      "label": "test_thumbnail_loader_stop_abandons_pending_jobs()",
+      "file_type": "code",
+      "source_file": "tests/test_ui.py",
+      "source_location": "L229",
+      "_origin": "ast",
+      "id": "tests_test_ui_test_thumbnail_loader_stop_abandons_pending_jobs",
+      "community": 3,
+      "community_name": "test_ui.py",
+      "norm_label": "test_thumbnail_loader_stop_abandons_pending_jobs()"
+    },
+    {
+      "label": "test_closing_the_window_stops_thumbnail_work()",
+      "file_type": "code",
+      "source_file": "tests/test_ui.py",
+      "source_location": "L240",
+      "_origin": "ast",
+      "id": "tests_test_ui_test_closing_the_window_stops_thumbnail_work",
+      "community": 3,
+      "community_name": "test_ui.py",
+      "norm_label": "test_closing_the_window_stops_thumbnail_work()"
     },
     {
       "label": "test_grid_marks_results_without_a_preview_as_unavailable()",
       "file_type": "code",
       "source_file": "tests/test_ui.py",
-      "source_location": "L229",
+      "source_location": "L256",
       "_origin": "ast",
       "id": "tests_test_ui_test_grid_marks_results_without_a_preview_as_unavailable",
-      "community": 2,
+      "community": 3,
       "community_name": "test_ui.py",
       "norm_label": "test_grid_marks_results_without_a_preview_as_unavailable()"
     },
@@ -2342,10 +2419,10 @@
       "label": "test_grid_restarts_the_generation_for_each_search()",
       "file_type": "code",
       "source_file": "tests/test_ui.py",
-      "source_location": "L235",
+      "source_location": "L262",
       "_origin": "ast",
       "id": "tests_test_ui_test_grid_restarts_the_generation_for_each_search",
-      "community": 2,
+      "community": 3,
       "community_name": "test_ui.py",
       "norm_label": "test_grid_restarts_the_generation_for_each_search()"
     },
@@ -2353,110 +2430,110 @@
       "label": "FakeRegistry",
       "file_type": "code",
       "source_file": "tests/test_ui.py",
-      "source_location": "L247",
+      "source_location": "L274",
       "_origin": "ast",
       "id": "tests_test_ui_fakeregistry",
       "community": 3,
-      "community_name": "MainWindow",
+      "community_name": "test_ui.py",
       "norm_label": "fakeregistry"
     },
     {
       "label": ".__init__()",
       "file_type": "code",
       "source_file": "tests/test_ui.py",
-      "source_location": "L248",
+      "source_location": "L275",
       "_origin": "ast",
       "id": "tests_test_ui_fakeregistry_init",
       "community": 3,
-      "community_name": "MainWindow",
+      "community_name": "test_ui.py",
       "norm_label": ".__init__()"
     },
     {
       "label": ".search()",
       "file_type": "code",
       "source_file": "tests/test_ui.py",
-      "source_location": "L251",
+      "source_location": "L278",
       "_origin": "ast",
       "id": "tests_test_ui_fakeregistry_search",
       "community": 3,
-      "community_name": "MainWindow",
+      "community_name": "test_ui.py",
       "norm_label": ".search()"
     },
     {
       "label": "FakeLibrary",
       "file_type": "code",
       "source_file": "tests/test_ui.py",
-      "source_location": "L256",
+      "source_location": "L283",
       "_origin": "ast",
       "id": "tests_test_ui_fakelibrary",
       "community": 3,
-      "community_name": "MainWindow",
+      "community_name": "test_ui.py",
       "norm_label": "fakelibrary"
     },
     {
       "label": ".__init__()",
       "file_type": "code",
       "source_file": "tests/test_ui.py",
-      "source_location": "L257",
+      "source_location": "L284",
       "_origin": "ast",
       "id": "tests_test_ui_fakelibrary_init",
       "community": 3,
-      "community_name": "MainWindow",
+      "community_name": "test_ui.py",
       "norm_label": ".__init__()"
     },
     {
       "label": ".download()",
       "file_type": "code",
       "source_file": "tests/test_ui.py",
-      "source_location": "L261",
+      "source_location": "L288",
       "_origin": "ast",
       "id": "tests_test_ui_fakelibrary_download",
       "community": 3,
-      "community_name": "MainWindow",
+      "community_name": "test_ui.py",
       "norm_label": ".download()"
     },
     {
       "label": ".items()",
       "file_type": "code",
       "source_file": "tests/test_ui.py",
-      "source_location": "L269",
+      "source_location": "L296",
       "_origin": "ast",
       "id": "tests_test_ui_fakelibrary_items",
       "community": 3,
-      "community_name": "MainWindow",
+      "community_name": "test_ui.py",
       "norm_label": ".items()"
     },
     {
       "label": "test_main_window_wires_search_download_and_credits()",
       "file_type": "code",
       "source_file": "tests/test_ui.py",
-      "source_location": "L273",
+      "source_location": "L300",
       "_origin": "ast",
       "id": "tests_test_ui_test_main_window_wires_search_download_and_credits",
       "community": 3,
-      "community_name": "MainWindow",
+      "community_name": "test_ui.py",
       "norm_label": "test_main_window_wires_search_download_and_credits()"
     },
     {
       "label": "test_threaded_download_keeps_its_worker_alive_until_completion()",
       "file_type": "code",
       "source_file": "tests/test_ui.py",
-      "source_location": "L290",
+      "source_location": "L317",
       "_origin": "ast",
       "id": "tests_test_ui_test_threaded_download_keeps_its_worker_alive_until_completion",
       "community": 3,
-      "community_name": "MainWindow",
+      "community_name": "test_ui.py",
       "norm_label": "test_threaded_download_keeps_its_worker_alive_until_completion()"
     },
     {
       "label": "test_empty_main_window_search_stays_local()",
       "file_type": "code",
       "source_file": "tests/test_ui.py",
-      "source_location": "L306",
+      "source_location": "L333",
       "_origin": "ast",
       "id": "tests_test_ui_test_empty_main_window_search_stays_local",
       "community": 3,
-      "community_name": "MainWindow",
+      "community_name": "test_ui.py",
       "norm_label": "test_empty_main_window_search_stays_local()"
     },
     {
@@ -2467,7 +2544,7 @@
       "_origin": "ast",
       "id": "tests_test_ui_rationale_94",
       "community": 2,
-      "community_name": "test_ui.py",
+      "community_name": "ThumbnailFetcher",
       "norm_label": "deterministic stand-in for time.sleep/time.monotonic."
     },
     {
@@ -2477,7 +2554,7 @@
       "source_location": "L108",
       "_origin": "ast",
       "id": "tests_test_ui_rationale_108",
-      "community": 2,
+      "community": 3,
       "community_name": "test_ui.py",
       "norm_label": "qthreadpool stand-in that runs jobs only when the test says so."
     },
@@ -3074,7 +3151,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_adapters",
@@ -3111,7 +3188,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resolvestock/sources/base.py",
-      "source_location": "L35",
+      "source_location": "L38",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_sources_base_cachedhttp_get_json",
@@ -3248,7 +3325,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/sources/base.py",
-      "source_location": "L25",
+      "source_location": "L28",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_sources_base_cachedhttp_init",
@@ -3306,7 +3383,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_adapters",
@@ -3318,7 +3395,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L16",
+      "source_location": "L42",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_adapters_source",
@@ -3330,7 +3407,19 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L47",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_adapters_test_openverse_keeps_page_size_within_the_anonymous_limit",
+      "target": "resolvestock_cache_responsecache",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_adapters.py",
+      "source_location": "L73",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_adapters_test_pixabay_uses_largest_asset_and_transparent_filter",
@@ -3774,7 +3863,19 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_ui.py",
-      "source_location": "L309",
+      "source_location": "L244",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ui_test_closing_the_window_stops_thumbnail_work",
+      "target": "resolvestock_config_config_load"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_ui.py",
+      "source_location": "L336",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_empty_main_window_search_stays_local",
@@ -3786,7 +3887,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_ui.py",
-      "source_location": "L274",
+      "source_location": "L301",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_main_window_wires_search_download_and_credits",
@@ -3798,7 +3899,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_ui.py",
-      "source_location": "L294",
+      "source_location": "L321",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_threaded_download_keeps_its_worker_alive_until_completion",
@@ -4011,7 +4112,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resolvestock/ui/main_window.py",
-      "source_location": "L161",
+      "source_location": "L165",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_main_window_mainwindow_export_credits",
@@ -4723,7 +4824,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resolvestock/sources/openverse.py",
-      "source_location": "L45",
+      "source_location": "L52",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_sources_openverse_openversesource_parse",
@@ -4807,7 +4908,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L197",
+      "source_location": "L206",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_grid_resultsgrid_set_results",
@@ -5111,7 +5212,7 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/sources/base.py",
-      "source_location": "L50",
+      "source_location": "L53",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_sources_base_source_search",
@@ -5146,7 +5247,7 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/sources/openverse.py",
-      "source_location": "L26",
+      "source_location": "L33",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_sources_openverse_openversesource_parse",
@@ -5158,7 +5259,7 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/sources/openverse.py",
-      "source_location": "L16",
+      "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_sources_openverse_openversesource_search",
@@ -5321,7 +5422,7 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L211",
+      "source_location": "L220",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_grid_resultsgrid_results",
@@ -5333,7 +5434,7 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L181",
+      "source_location": "L190",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_grid_resultsgrid_set_results",
@@ -5515,7 +5616,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L238",
+      "source_location": "L265",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_grid_restarts_the_generation_for_each_search",
@@ -5632,7 +5733,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_ui.py",
-      "source_location": "L265",
+      "source_location": "L292",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_fakelibrary_download",
@@ -5710,7 +5811,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/sources/base.py",
-      "source_location": "L24",
+      "source_location": "L27",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_sources_base",
@@ -5721,7 +5822,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/sources/base.py",
-      "source_location": "L15",
+      "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_sources_base",
@@ -5732,7 +5833,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/sources/base.py",
-      "source_location": "L45",
+      "source_location": "L48",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_sources_base",
@@ -5839,7 +5940,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_adapters",
@@ -5863,7 +5964,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/sources/base.py",
-      "source_location": "L50",
+      "source_location": "L53",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_sources_base_source_search",
@@ -5898,7 +5999,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/sources/openverse.py",
-      "source_location": "L16",
+      "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_sources_openverse_openversesource_search",
@@ -6071,7 +6172,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/main_window.py",
-      "source_location": "L110",
+      "source_location": "L114",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_main_window_mainwindow_build_query",
@@ -6083,7 +6184,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_adapters",
@@ -6095,7 +6196,19 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L27",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_adapters_test_openverse_keeps_page_size_within_the_anonymous_limit",
+      "target": "resolvestock_sources_base_searchquery",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_adapters.py",
+      "source_location": "L53",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_adapters_test_openverse_normalizes_svg_and_attribution",
@@ -6107,7 +6220,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L52",
+      "source_location": "L78",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_adapters_test_pixabay_uses_largest_asset_and_transparent_filter",
@@ -6119,7 +6232,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L33",
+      "source_location": "L59",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_adapters_test_wikimedia_reads_extmetadata",
@@ -6165,7 +6278,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/sources/base.py",
-      "source_location": "L34",
+      "source_location": "L37",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_sources_base_cachedhttp",
@@ -6176,7 +6289,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/sources/base.py",
-      "source_location": "L25",
+      "source_location": "L28",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_sources_base_cachedhttp",
@@ -6211,7 +6324,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/sources/openverse.py",
-      "source_location": "L13",
+      "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_sources_openverse_openversesource_init",
@@ -6317,7 +6430,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_adapters",
@@ -6329,7 +6442,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L15",
+      "source_location": "L41",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_adapters_source",
@@ -6341,7 +6454,19 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L46",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_adapters_test_openverse_keeps_page_size_within_the_anonymous_limit",
+      "target": "resolvestock_sources_base_cachedhttp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_adapters.py",
+      "source_location": "L72",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_adapters_test_pixabay_uses_largest_asset_and_transparent_filter",
@@ -6388,7 +6513,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/sources/base.py",
-      "source_location": "L25",
+      "source_location": "L28",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_sources_base_cachedhttp_init",
@@ -6399,7 +6524,7 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/sources/base.py",
-      "source_location": "L45",
+      "source_location": "L48",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_sources_base_source",
@@ -6410,7 +6535,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/sources/base.py",
-      "source_location": "L50",
+      "source_location": "L53",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_sources_base_source",
@@ -6547,7 +6672,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/sources/openverse.py",
-      "source_location": "L10",
+      "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_sources_openverse",
@@ -6570,7 +6695,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_adapters",
@@ -6581,7 +6706,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/sources/openverse.py",
-      "source_location": "L13",
+      "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_sources_openverse_openversesource",
@@ -6592,7 +6717,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/sources/openverse.py",
-      "source_location": "L26",
+      "source_location": "L33",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_sources_openverse_openversesource",
@@ -6603,7 +6728,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/sources/openverse.py",
-      "source_location": "L16",
+      "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_sources_openverse_openversesource",
@@ -6614,7 +6739,7 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/sources/openverse.py",
-      "source_location": "L10",
+      "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_sources_openverse_openversesource",
@@ -6672,7 +6797,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_adapters",
@@ -6683,8 +6808,20 @@
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
+      "source_file": "tests/test_adapters.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_adapters_test_openverse_keeps_page_size_within_the_anonymous_limit",
+      "target": "resolvestock_sources_openverse_openversesource",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
       "source_file": "resolvestock/sources/openverse.py",
-      "source_location": "L24",
+      "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_sources_openverse_openversesource_search",
@@ -6718,7 +6855,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_adapters",
@@ -6820,7 +6957,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_adapters",
@@ -6832,7 +6969,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L45",
+      "source_location": "L71",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_adapters_test_pixabay_uses_largest_asset_and_transparent_filter",
@@ -7017,7 +7154,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_ui.py",
-      "source_location": "L253",
+      "source_location": "L280",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_fakeregistry_search",
@@ -7211,7 +7348,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_adapters",
@@ -7279,7 +7416,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_adapters",
@@ -7371,7 +7508,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L239",
+      "source_location": "L248",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_grid",
@@ -7382,7 +7519,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L162",
+      "source_location": "L171",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_grid",
@@ -7826,7 +7963,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L154",
+      "source_location": "L163",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_grid_thumbnailloader_load",
@@ -7874,7 +8011,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L175",
+      "source_location": "L184",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_grid_resultsgrid_init",
@@ -7907,7 +8044,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L150",
+      "source_location": "L159",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_grid_thumbnailloader",
@@ -7918,7 +8055,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L153",
+      "source_location": "L162",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_grid_thumbnailloader",
@@ -7929,11 +8066,22 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L158",
+      "source_location": "L167",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_grid_thumbnailloader",
       "target": "resolvestock_ui_grid_thumbnailloader_retire",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "resolvestock/ui/grid.py",
+      "source_location": "L150",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "resolvestock_ui_grid_thumbnailloader",
+      "target": "resolvestock_ui_grid_thumbnailloader_stop",
       "confidence_score": 1.0
     },
     {
@@ -8008,7 +8156,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L230",
+      "source_location": "L257",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_grid_marks_results_without_a_preview_as_unavailable",
@@ -8020,7 +8168,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L237",
+      "source_location": "L264",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_grid_restarts_the_generation_for_each_search",
@@ -8055,6 +8203,18 @@
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
+      "source_file": "tests/test_ui.py",
+      "source_location": "L231",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ui_test_thumbnail_loader_stop_abandons_pending_jobs",
+      "target": "resolvestock_ui_grid_thumbnailloader",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/grid.py",
       "source_location": "L137",
       "weight": 1.0,
@@ -8079,7 +8239,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L185",
+      "source_location": "L194",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_grid_resultsgrid_set_results",
@@ -8091,7 +8251,30 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L209",
+      "source_location": "L157",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "resolvestock_ui_grid_thumbnailloader_stop",
+      "target": "resolvestock_ui_grid_thumbnailloader_begin_generation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "resolvestock/ui/grid.py",
+      "source_location": "L151",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "resolvestock_ui_grid_rationale_151",
+      "target": "resolvestock_ui_grid_thumbnailloader_stop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "resolvestock/ui/grid.py",
+      "source_location": "L218",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_grid_resultsgrid_set_results",
@@ -8102,7 +8285,7 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L162",
+      "source_location": "L171",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_grid_resultsgrid",
@@ -8113,7 +8296,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L217",
+      "source_location": "L226",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_grid_resultsgrid",
@@ -8124,7 +8307,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L234",
+      "source_location": "L243",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_grid_resultsgrid",
@@ -8135,7 +8318,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L165",
+      "source_location": "L174",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_grid_resultsgrid",
@@ -8146,7 +8329,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L231",
+      "source_location": "L240",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_grid_resultsgrid",
@@ -8157,7 +8340,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L227",
+      "source_location": "L236",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_grid_resultsgrid",
@@ -8168,7 +8351,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L211",
+      "source_location": "L220",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_grid_resultsgrid",
@@ -8179,7 +8362,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L181",
+      "source_location": "L190",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_grid_resultsgrid",
@@ -8327,7 +8510,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L230",
+      "source_location": "L257",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_grid_marks_results_without_a_preview_as_unavailable",
@@ -8351,7 +8534,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L237",
+      "source_location": "L264",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_grid_restarts_the_generation_for_each_search",
@@ -8363,7 +8546,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L204",
+      "source_location": "L213",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_grid_resultsgrid_set_results",
@@ -8375,7 +8558,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L218",
+      "source_location": "L227",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_grid_resultsgrid_apply_thumbnail",
@@ -8387,7 +8570,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L220",
+      "source_location": "L229",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_grid_resultsgrid_apply_thumbnail",
@@ -8399,7 +8582,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L229",
+      "source_location": "L238",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_grid_resultsgrid_mark_thumbnail_failed",
@@ -8411,7 +8594,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L239",
+      "source_location": "L248",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_grid_pixmap_from_bytes",
@@ -8422,10 +8605,10 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/grid.py",
-      "source_location": "L240",
+      "source_location": "L249",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "resolvestock_ui_grid_rationale_240",
+      "source": "resolvestock_ui_grid_rationale_249",
       "target": "resolvestock_ui_grid_pixmap_from_bytes",
       "confidence_score": 1.0
     },
@@ -8572,7 +8755,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/main_window.py",
-      "source_location": "L134",
+      "source_location": "L138",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_main_window_mainwindow_download",
@@ -8628,7 +8811,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/main_window.py",
-      "source_location": "L135",
+      "source_location": "L139",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_main_window_mainwindow_download",
@@ -8674,7 +8857,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/main_window.py",
-      "source_location": "L110",
+      "source_location": "L114",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_main_window_mainwindow",
@@ -8685,7 +8868,18 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/main_window.py",
-      "source_location": "L132",
+      "source_location": "L110",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "resolvestock_ui_main_window_mainwindow",
+      "target": "resolvestock_ui_main_window_mainwindow_closeevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "resolvestock/ui/main_window.py",
+      "source_location": "L136",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_main_window_mainwindow",
@@ -8696,7 +8890,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/main_window.py",
-      "source_location": "L160",
+      "source_location": "L164",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_main_window_mainwindow",
@@ -8718,7 +8912,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/main_window.py",
-      "source_location": "L153",
+      "source_location": "L157",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_main_window_mainwindow",
@@ -8729,7 +8923,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/main_window.py",
-      "source_location": "L163",
+      "source_location": "L167",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_main_window_mainwindow",
@@ -8740,7 +8934,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/main_window.py",
-      "source_location": "L157",
+      "source_location": "L161",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_main_window_mainwindow",
@@ -8751,7 +8945,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/main_window.py",
-      "source_location": "L118",
+      "source_location": "L122",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_main_window_mainwindow",
@@ -8841,7 +9035,19 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L308",
+      "source_location": "L241",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ui_test_closing_the_window_stops_thumbnail_work",
+      "target": "resolvestock_ui_main_window_mainwindow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ui.py",
+      "source_location": "L335",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_empty_main_window_search_stays_local",
@@ -8853,7 +9059,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L276",
+      "source_location": "L303",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_main_window_wires_search_download_and_credits",
@@ -8865,7 +9071,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L291",
+      "source_location": "L318",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_threaded_download_keeps_its_worker_alive_until_completion",
@@ -8901,7 +9107,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/main_window.py",
-      "source_location": "L119",
+      "source_location": "L123",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_main_window_mainwindow_run_search",
@@ -8913,7 +9119,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/main_window.py",
-      "source_location": "L154",
+      "source_location": "L158",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_main_window_mainwindow_on_download_finished",
@@ -8925,7 +9131,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/main_window.py",
-      "source_location": "L160",
+      "source_location": "L164",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_main_window_mainwindow_export_credits",
@@ -8937,7 +9143,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/main_window.py",
-      "source_location": "L168",
+      "source_location": "L172",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_main_window_mainwindow_prompt_export_credits",
@@ -8949,7 +9155,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "resolvestock/ui/main_window.py",
-      "source_location": "L168",
+      "source_location": "L172",
       "weight": 1.0,
       "_origin": "ast",
       "source": "resolvestock_ui_main_window_mainwindow_prompt_export_credits",
@@ -9163,7 +9369,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L14",
+      "source_location": "L40",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_adapters",
@@ -9174,7 +9380,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L24",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_adapters",
+      "target": "tests_test_adapters_test_openverse_keeps_page_size_within_the_anonymous_limit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_adapters.py",
+      "source_location": "L50",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_adapters",
@@ -9185,7 +9402,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L37",
+      "source_location": "L63",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_adapters",
@@ -9196,7 +9413,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L31",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_adapters",
+      "target": "tests_test_adapters_test_user_agent_identifies_the_tool_and_a_way_to_reach_it",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_adapters.py",
+      "source_location": "L57",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_adapters",
@@ -9208,7 +9436,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L26",
+      "source_location": "L52",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_adapters_test_openverse_normalizes_svg_and_attribution",
@@ -9220,7 +9448,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_adapters.py",
-      "source_location": "L33",
+      "source_location": "L59",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_adapters_test_wikimedia_reads_extmetadata",
@@ -9445,7 +9673,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L256",
+      "source_location": "L283",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui",
@@ -9456,7 +9684,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L247",
+      "source_location": "L274",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui",
@@ -9511,7 +9739,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L306",
+      "source_location": "L240",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ui",
+      "target": "tests_test_ui_test_closing_the_window_stops_thumbnail_work",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ui.py",
+      "source_location": "L333",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui",
@@ -9533,7 +9772,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L229",
+      "source_location": "L256",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui",
@@ -9555,7 +9794,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L235",
+      "source_location": "L262",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui",
@@ -9566,7 +9805,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L273",
+      "source_location": "L300",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui",
@@ -9577,7 +9816,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L290",
+      "source_location": "L317",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui",
@@ -9665,6 +9904,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
+      "source_location": "L229",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ui",
+      "target": "tests_test_ui_test_thumbnail_loader_stop_abandons_pending_jobs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ui.py",
       "source_location": "L56",
       "weight": 1.0,
       "_origin": "ast",
@@ -9689,7 +9939,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L253",
+      "source_location": "L280",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_fakeregistry_search",
@@ -9725,7 +9975,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L231",
+      "source_location": "L258",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_grid_marks_results_without_a_preview_as_unavailable",
@@ -9749,7 +9999,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L239",
+      "source_location": "L266",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_grid_restarts_the_generation_for_each_search",
@@ -9761,7 +10011,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L283",
+      "source_location": "L310",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_main_window_wires_search_download_and_credits",
@@ -9773,7 +10023,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L296",
+      "source_location": "L323",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_threaded_download_keeps_its_worker_alive_until_completion",
@@ -9901,7 +10151,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L301",
+      "source_location": "L328",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_threaded_download_keeps_its_worker_alive_until_completion",
@@ -9913,7 +10163,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L298",
+      "source_location": "L325",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_threaded_download_keeps_its_worker_alive_until_completion",
@@ -9980,7 +10230,19 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L230",
+      "source_location": "L247",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ui_test_closing_the_window_stops_thumbnail_work",
+      "target": "tests_test_ui_manualpool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ui.py",
+      "source_location": "L257",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_grid_marks_results_without_a_preview_as_unavailable",
@@ -9992,7 +10254,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L236",
+      "source_location": "L263",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_grid_restarts_the_generation_for_each_search",
@@ -10028,7 +10290,31 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L243",
+      "source_location": "L230",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ui_test_thumbnail_loader_stop_abandons_pending_jobs",
+      "target": "tests_test_ui_manualpool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ui.py",
+      "source_location": "L251",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ui_test_closing_the_window_stops_thumbnail_work",
+      "target": "tests_test_ui_manualpool_run_all",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ui.py",
+      "source_location": "L270",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_grid_restarts_the_generation_for_each_search",
@@ -10060,6 +10346,18 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ui.py",
+      "source_location": "L235",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ui_test_thumbnail_loader_stop_abandons_pending_jobs",
+      "target": "tests_test_ui_manualpool_run_all",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
@@ -10086,7 +10384,19 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L230",
+      "source_location": "L246",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ui_test_closing_the_window_stops_thumbnail_work",
+      "target": "tests_test_ui_recordingfetcher",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ui.py",
+      "source_location": "L257",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_grid_marks_results_without_a_preview_as_unavailable",
@@ -10098,7 +10408,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L236",
+      "source_location": "L263",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_grid_restarts_the_generation_for_each_search",
@@ -10126,6 +10436,18 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_thumbnail_loader_keeps_jobs_alive_until_they_finish",
+      "target": "tests_test_ui_recordingfetcher",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ui.py",
+      "source_location": "L230",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ui_test_thumbnail_loader_stop_abandons_pending_jobs",
       "target": "tests_test_ui_recordingfetcher",
       "confidence_score": 1.0
     },
@@ -10250,10 +10572,34 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ui.py",
+      "source_location": "L243",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ui_test_closing_the_window_stops_thumbnail_work",
+      "target": "tests_test_ui_fakelibrary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ui.py",
+      "source_location": "L242",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ui_test_closing_the_window_stops_thumbnail_work",
+      "target": "tests_test_ui_fakeregistry",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L248",
+      "source_location": "L275",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_fakeregistry",
@@ -10264,7 +10610,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L251",
+      "source_location": "L278",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_fakeregistry",
@@ -10276,7 +10622,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L307",
+      "source_location": "L334",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_empty_main_window_search_stays_local",
@@ -10288,7 +10634,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L275",
+      "source_location": "L302",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_main_window_wires_search_download_and_credits",
@@ -10300,7 +10646,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L292",
+      "source_location": "L319",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_threaded_download_keeps_its_worker_alive_until_completion",
@@ -10311,7 +10657,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L261",
+      "source_location": "L288",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_fakelibrary",
@@ -10322,7 +10668,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L257",
+      "source_location": "L284",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_fakelibrary",
@@ -10333,7 +10679,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L269",
+      "source_location": "L296",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_fakelibrary",
@@ -10345,7 +10691,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L309",
+      "source_location": "L336",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_empty_main_window_search_stays_local",
@@ -10357,7 +10703,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L275",
+      "source_location": "L302",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_main_window_wires_search_download_and_credits",
@@ -10369,7 +10715,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L293",
+      "source_location": "L320",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_threaded_download_keeps_its_worker_alive_until_completion",
@@ -10381,7 +10727,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L283",
+      "source_location": "L310",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_main_window_wires_search_download_and_credits",
@@ -10393,7 +10739,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ui.py",
-      "source_location": "L296",
+      "source_location": "L323",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ui_test_threaded_download_keeps_its_worker_alive_until_completion",

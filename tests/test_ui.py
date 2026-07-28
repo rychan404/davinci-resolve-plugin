@@ -311,6 +311,69 @@ def test_grid_counts_a_result_with_no_preview_as_already_resolved(app):
     assert grid.preview_counts() == (1, 1)
 
 
+def grid_with_results(count, pool, fetcher):
+    grid = ResultsGrid(loader=ThumbnailLoader(fetcher=fetcher, pool=pool))
+    results = [
+        SearchResult(
+            **{
+                **make_result(source_id=str(index)).__dict__,
+                "preview_url": f"https://upload.example.org/{index}.jpg",
+            }
+        )
+        for index in range(count)
+    ]
+    grid.set_results(results)
+    return grid
+
+
+def test_grid_requests_a_first_batch_when_it_has_no_geometry_yet(app):
+    # The widget was never shown, so visualItemRect cannot say what is visible.
+    pool, fetcher = ManualPool(), RecordingFetcher(payload=PNG_BYTES)
+    grid = grid_with_results(40, pool, fetcher)
+    pool.run_all()
+    assert len(fetcher.urls) == 24
+
+
+def test_grid_requests_only_previews_near_the_viewport(app):
+    pool, fetcher = ManualPool(), RecordingFetcher(payload=PNG_BYTES)
+    grid = grid_with_results(40, pool, fetcher)
+    grid.resize(400, 300)
+    grid.show()
+    app.processEvents()
+    grid.request_visible_previews()
+    pool.run_all()
+    assert 0 < len(fetcher.urls) < 40
+
+
+def test_grid_requests_more_previews_as_the_user_scrolls(app):
+    pool, fetcher = ManualPool(), RecordingFetcher(payload=PNG_BYTES)
+    grid = grid_with_results(40, pool, fetcher)
+    grid.resize(400, 300)
+    grid.show()
+    app.processEvents()
+    grid.request_visible_previews()
+    pool.run_all()
+    first_screen = list(fetcher.urls)
+
+    scrollbar = grid.verticalScrollBar()
+    scrollbar.setValue(scrollbar.maximum())
+    app.processEvents()
+    pool.run_all()
+    assert len(fetcher.urls) > len(first_screen)
+
+
+def test_grid_does_not_request_the_same_preview_twice(app):
+    pool, fetcher = ManualPool(), RecordingFetcher(payload=PNG_BYTES)
+    grid = grid_with_results(40, pool, fetcher)
+    grid.resize(400, 300)
+    grid.show()
+    app.processEvents()
+    for _ in range(5):
+        grid.request_visible_previews()
+    pool.run_all()
+    assert len(fetcher.urls) == len(set(fetcher.urls))
+
+
 def test_grid_restarts_the_generation_for_each_search(app):
     pool, fetcher = ManualPool(), RecordingFetcher()
     grid = ResultsGrid(loader=ThumbnailLoader(fetcher=fetcher, pool=pool))

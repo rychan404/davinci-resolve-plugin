@@ -21,6 +21,8 @@ MAX_ATTEMPTS = 6
 MAX_BACKOFF = 8.0
 PREVIEW_URL_ROLE = Qt.UserRole + 1
 PREVIEW_STATE_ROLE = Qt.UserRole + 2
+PRELOAD_MARGIN = 200
+INITIAL_BATCH = 24
 
 
 class ThumbnailFetcher:
@@ -189,11 +191,13 @@ class ResultsGrid(QListWidget):
         self.setWordWrap(True)
         self._results, self._items_by_url = {}, {}
         self._resolved_urls, self._resolved_tiles, self._total_tiles = set(), 0, 0
+        self._requested_urls = set()
         self.loader = loader or ThumbnailLoader()
         self.loader.setParent(self)
         self.loader.signals.loaded.connect(self._apply_thumbnail)
         self.loader.signals.failed.connect(self._mark_thumbnail_failed)
         self.itemDoubleClicked.connect(self._emit_download)
+        self.verticalScrollBar().valueChanged.connect(self.request_visible_previews)
 
     def set_results(self, results: list[SearchResult]) -> None:
         self.clear()
@@ -224,11 +228,10 @@ class ResultsGrid(QListWidget):
                 self._mark_entry_failed(entry, "This result has no preview image.")
                 self._count_resolved(1)
                 continue
-            entries = self._items_by_url.setdefault(result.preview_url, [])
-            entries.append(entry)
-            if len(entries) == 1:
-                self.loader.load(result.preview_url)
+            self._items_by_url.setdefault(result.preview_url, []).append(entry)
+        self._requested_urls.clear()
         self.preview_progress.emit(self._resolved_tiles, self._total_tiles)
+        self.request_visible_previews()
 
     def results(self) -> list[SearchResult]:
         return [
@@ -239,6 +242,47 @@ class ResultsGrid(QListWidget):
     def preview_counts(self) -> tuple[int, int]:
         """Tiles whose preview has settled, and tiles in the grid."""
         return self._resolved_tiles, self._total_tiles
+
+    def request_visible_previews(self) -> None:
+        """Fetch previews for tiles on screen, and for a margin either side.
+
+        Requesting all forty results of a search at once queues them behind one
+        host's pace gate, so tiles nobody is looking at delay the ones in view.
+        """
+        for url in self._visible_preview_urls():
+            if url in self._requested_urls:
+                continue
+            self._requested_urls.add(url)
+            self.loader.load(url)
+
+    def _visible_preview_urls(self) -> list[str]:
+        visible = self.viewport().rect().adjusted(0, -PRELOAD_MARGIN, 0, PRELOAD_MARGIN)
+        if not self.isVisible() or self.viewport().height() <= 0:
+            # Never shown, or laid out yet — fall back to a first screenful.
+            # A never-shown top-level QListWidget already reports a nonzero
+            # default viewport size, so height() alone cannot detect this case;
+            # isVisible() stays False until show() + processEvents() run.
+            return self._preview_urls()[:INITIAL_BATCH]
+        urls = []
+        for index in range(self.count()):
+            entry = self.item(index)
+            url = entry.data(PREVIEW_URL_ROLE)
+            if url and self.visualItemRect(entry).intersects(visible):
+                urls.append(url)
+        return urls
+
+    def _preview_urls(self) -> list[str]:
+        seen, urls = set(), []
+        for index in range(self.count()):
+            url = self.item(index).data(PREVIEW_URL_ROLE)
+            if url and url not in seen:
+                seen.add(url)
+                urls.append(url)
+        return urls
+
+    def resizeEvent(self, event):
+        super().resizeEvent(event)
+        self.request_visible_previews()
 
     def _set_state(self, entry, state: str, icon) -> None:
         entry.setData(PREVIEW_STATE_ROLE, state)
