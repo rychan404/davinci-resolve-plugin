@@ -1,0 +1,28 @@
+{
+ "total": 2,
+ "totalHits": 2,
+ "hits": [
+  {
+   "id": 2002,
+   "pageURL": "https://example.invalid/pixabay-retriever",
+   "type": "photo",
+   "tags": "golden retriever, dog, pet",
+   "previewURL": "https://example.invalid/preview.jpg",
+   "webformatURL": "https://example.invalid/web.jpg",
+   "largeImageURL": "https://example.invalid/large.jpg",
+   "imageWidth": 4000,
+   "imageHeight": 3000,
+   "user": "Fixture Photographer"
+  },
+  {
+   "pageURL": "https://example.invalid/pixabay-no-id",
+   "type": "photo",
+   "tags": "unidentified, hit",
+   "previewURL": "https://example.invalid/orphan-preview.jpg",
+   "largeImageURL": "https://example.invalid/orphan-large.jpg",
+   "imageWidth": 800,
+   "imageHeight": 600,
+   "user": "Fixture Photographer"
+  }
+ ]
+}

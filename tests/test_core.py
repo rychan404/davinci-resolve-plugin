@@ -109,3 +109,15 @@ def test_registry_interleaves_deduplicates_and_keeps_source_failures():
     ).search(SearchQuery("smoke"))
     assert [entry.uid for entry in outcome.results] == ["a:1", "b:1", "a:2"]
     assert outcome.errors == {"bad": "offline"}
+
+
+def test_cli_exposes_a_photographs_only_flag():
+    from resolvestock.cli import build_parser
+
+    assert build_parser().parse_args(["retriever", "--photos"]).photos is True
+
+
+def test_search_query_keeps_commercial_safety_as_its_sixth_field():
+    # cli.py builds SearchQuery positionally, so a field inserted ahead of
+    # commercial_safe_only silently re-enables the restricted-content filter.
+    assert SearchQuery("smoke", 1, 20, False, False, False).commercial_safe_only is False

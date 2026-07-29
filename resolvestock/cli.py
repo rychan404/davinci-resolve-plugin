@@ -28,15 +28,20 @@ def format_results(outcome: SearchOutcome) -> str:
     return "\n".join(lines)
 
 
-def main(argv: list[str] | None = None) -> int:
+def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="resolvestock")
     parser.add_argument("query")
     parser.add_argument("--transparent", action="store_true")
     parser.add_argument("--vectors", action="store_true")
+    parser.add_argument("--photos", action="store_true")
     parser.add_argument("--include-restricted", action="store_true")
     parser.add_argument("--page", type=int, default=1)
     parser.add_argument("--per-page", type=int, default=20)
-    args = parser.parse_args(argv)
+    return parser
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = build_parser().parse_args(argv)
     config = Config.load()
     registry = build_registry(
         CachedHttp(ResponseCache(config.library_dir / ".cache" / "responses.db")),
@@ -45,11 +50,12 @@ def main(argv: list[str] | None = None) -> int:
     outcome = registry.search(
         SearchQuery(
             args.query,
-            args.page,
-            args.per_page,
-            args.transparent,
-            args.vectors,
-            not args.include_restricted,
+            page=args.page,
+            per_page=args.per_page,
+            transparent_only=args.transparent,
+            vectors_only=args.vectors,
+            commercial_safe_only=not args.include_restricted,
+            photos_only=args.photos,
         )
     )
     print(format_results(outcome))

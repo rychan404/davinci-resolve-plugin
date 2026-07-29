@@ -61,10 +61,12 @@ class MainWindow(QMainWindow):
         (
             self.transparent_checkbox,
             self.vectors_checkbox,
+            self.photos_checkbox,
             self.commercial_safe_checkbox,
         ) = (
             QCheckBox("Transparent only"),
             QCheckBox("Vectors only"),
+            QCheckBox("Photos only"),
             QCheckBox("Commercial-safe only"),
         )
         self.commercial_safe_checkbox.setChecked(True)
@@ -88,6 +90,7 @@ class MainWindow(QMainWindow):
             for widget in (
                 self.transparent_checkbox,
                 self.vectors_checkbox,
+                self.photos_checkbox,
                 self.commercial_safe_checkbox,
             )
         ]
@@ -119,6 +122,7 @@ class MainWindow(QMainWindow):
             transparent_only=self.transparent_checkbox.isChecked(),
             vectors_only=self.vectors_checkbox.isChecked(),
             commercial_safe_only=self.commercial_safe_checkbox.isChecked(),
+            photos_only=self.photos_checkbox.isChecked(),
         )
 
     def run_search(self) -> None:

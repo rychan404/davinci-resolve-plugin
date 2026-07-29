@@ -495,6 +495,17 @@ def test_main_window_wires_search_download_and_credits(app, tmp_path):
     assert "Smoke by Jane" in credits.read_text(encoding="utf-8")
 
 
+def test_main_window_can_restrict_a_search_to_photographs(app, tmp_path):
+    registry = FakeRegistry()
+    window = MainWindow(
+        registry, FakeLibrary(tmp_path / "library"), Config.load(tmp_path / "config.json")
+    )
+    window.search_input.setText("retriever")
+    window.photos_checkbox.setChecked(True)
+    window.run_search()
+    assert registry.queries[0].photos_only
+
+
 def test_window_status_reports_preview_progress(app, tmp_path):
     window = MainWindow(
         FakeRegistry(),

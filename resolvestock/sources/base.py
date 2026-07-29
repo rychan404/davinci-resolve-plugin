@@ -22,6 +22,9 @@ class SearchQuery:
     transparent_only: bool = False
     vectors_only: bool = False
     commercial_safe_only: bool = True
+    # Appended deliberately: cli.py constructs this positionally, so new fields
+    # have to land after commercial_safe_only.
+    photos_only: bool = False
 
 
 class CachedHttp:
