@@ -175,6 +175,54 @@ def test_thumbnail_fetcher_reports_failure_after_exhausting_retries(app):
     assert len(attempts) == 3
 
 
+def test_thumbnail_fetcher_retries_on_a_failed_dependency(app):
+    codes = [424, 200]
+
+    def handler(request):
+        code = codes.pop(0)
+        if code == 424:
+            return httpx.Response(424)
+        return httpx.Response(200, content=b"payload")
+
+    clock = FakeClock()
+    fetcher = build_fetcher(handler, clock, min_interval=0)
+    assert fetcher.fetch("https://upload.example.org/a.jpg") == b"payload"
+    assert codes == []
+    assert clock.slept == [1.0]
+
+
+def test_thumbnail_fetcher_reports_failure_after_exhausting_424_retries(app):
+    attempts = []
+
+    def handler(request):
+        attempts.append(request.url)
+        return httpx.Response(424)
+
+    clock = FakeClock()
+    fetcher = build_fetcher(handler, clock, min_interval=0, max_attempts=3)
+    with pytest.raises(httpx.HTTPStatusError):
+        fetcher.fetch("https://upload.example.org/a.jpg")
+    assert len(attempts) == 3
+
+
+def test_thumbnail_fetcher_does_not_widen_host_pacing_after_a_424(app):
+    # Unlike a 429, a 424 is specific to one file, so it must not slow down
+    # every other request to the same host.
+    codes = [424, 200, 200]
+
+    def handler(request):
+        if codes.pop(0) == 424:
+            return httpx.Response(424)
+        return httpx.Response(200, content=b"ok")
+
+    clock = FakeClock()
+    fetcher = build_fetcher(handler, clock, min_interval=0)
+    fetcher.fetch("https://upload.example.org/a.jpg")
+    clock.slept.clear()
+    fetcher.fetch("https://upload.example.org/b.jpg")
+    assert clock.slept == []
+
+
 def test_thumbnail_fetcher_paces_requests_to_the_same_host(app):
     clock = FakeClock()
     fetcher = build_fetcher(

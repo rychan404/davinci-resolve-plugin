@@ -25,6 +25,9 @@ PRELOAD_MARGIN = 200
 INITIAL_BATCH = 24
 
 
+RETRYABLE_STATUSES = {429, 424}
+
+
 class ThumbnailFetcher:
     """Fetch previews at a pace the image CDNs tolerate.
 
@@ -33,6 +36,12 @@ class ThumbnailFetcher:
     requests per host and retrying on 429 turns a transient throttle back into a
     visible thumbnail instead of a permanently empty tile. The spacing widens
     whenever a host pushes back and relaxes again once it stops.
+
+    Commons also answers occasional single files with 424 (Failed Dependency)
+    when its own thumbnail render failed, unrelated to rate limiting. That is
+    usually transient too, so it gets a plain retry with a short flat delay —
+    without widening the whole host's pacing, since the problem is specific to
+    one file rather than a signal every other request should slow down.
     """
 
     def __init__(
@@ -62,13 +71,16 @@ class ThumbnailFetcher:
         for attempt in range(1, self.max_attempts + 1):
             self._wait_for_turn(host)
             response = self.client.get(url)
-            if response.status_code != 429:
+            if response.status_code not in RETRYABLE_STATUSES:
                 response.raise_for_status()
                 self._relax(host)
                 return response.content
             if attempt == self.max_attempts:
                 response.raise_for_status()
-            self._throttle(host, self._retry_after(response))
+            if response.status_code == 429:
+                self._throttle(host, self._retry_after(response))
+            else:
+                self.sleep(self._retry_after(response))
         raise AssertionError("unreachable")
 
     def close(self) -> None:

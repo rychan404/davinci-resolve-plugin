@@ -90,8 +90,8 @@
     "semantic_hash": ""
   },
   "resolvestock/ui/grid.py": {
-    "mtime": 1785270038.5952582,
-    "ast_hash": "7268eaafe3c699bb3e695620645ba7a0",
+    "mtime": 1785364162.927673,
+    "ast_hash": "e21e777884d0a1d921ebef8e779fa180",
     "semantic_hash": ""
   },
   "resolvestock/ui/main_window.py": {
@@ -130,8 +130,8 @@
     "semantic_hash": ""
   },
   "tests/test_ui.py": {
-    "mtime": 1785269925.7057297,
-    "ast_hash": "f578c7bf881967cc6c993829a696fa52",
+    "mtime": 1785364182.1585279,
+    "ast_hash": "49cf589f8b7de97eeab7fbdbc96f3708",
     "semantic_hash": ""
   },
   "CLAUDE.md": {
