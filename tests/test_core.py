@@ -121,3 +121,35 @@ def test_search_query_keeps_commercial_safety_as_its_sixth_field():
     # cli.py builds SearchQuery positionally, so a field inserted ahead of
     # commercial_safe_only silently re-enables the restricted-content filter.
     assert SearchQuery("smoke", 1, 20, False, False, False).commercial_safe_only is False
+
+
+def test_cached_http_retries_once_after_short_429(tmp_path):
+    statuses, waits = [429, 200], []
+
+    def handler(request):
+        return httpx.Response(
+            statuses.pop(0), headers={"X-RateLimit-Reset": "2"}, json={"ok": True}
+        )
+
+    client = httpx.Client(transport=httpx.MockTransport(handler))
+    http = CachedHttp(ResponseCache(tmp_path / "cache.db"), client, sleep=waits.append)
+    assert http.get_json("https://api.example/x", {"q": "x"}) == {"ok": True}
+    assert waits == [2.0]
+
+
+def test_cached_http_gives_up_on_long_429(tmp_path):
+    calls, waits = [], []
+
+    def handler(request):
+        calls.append(request.url)
+        return httpx.Response(429, headers={"Retry-After": "60"})
+
+    client = httpx.Client(transport=httpx.MockTransport(handler))
+    http = CachedHttp(ResponseCache(tmp_path / "cache.db"), client, sleep=waits.append)
+    try:
+        http.get_json("https://api.example/x", {"q": "x"})
+    except httpx.HTTPStatusError:
+        pass
+    else:
+        raise AssertionError("expected 429 to surface")
+    assert len(calls) == 1 and waits == []
