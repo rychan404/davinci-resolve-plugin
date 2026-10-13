@@ -11,6 +11,7 @@ from PySide6.QtWidgets import (
     QMainWindow,
     QPushButton,
     QSplitter,
+    QTabBar,
     QVBoxLayout,
     QWidget,
 )
@@ -96,6 +97,15 @@ class MainWindow(QMainWindow):
         ]
         filters.addStretch(1)
         filters.addWidget(self.credits_button)
+        self.source_tabs = QTabBar()
+        self.source_tabs.addTab("All")
+        for source in registry.sources:
+            self.source_tabs.setTabData(
+                self.source_tabs.addTab(source.name.capitalize()), source.name
+            )
+        # Connected after the tabs exist: addTab on an empty bar emits
+        # currentChanged, which must not trigger a search during construction.
+        self.source_tabs.currentChanged.connect(self._on_source_tab_changed)
         splitter = QSplitter(Qt.Vertical)
         splitter.addWidget(self.grid)
         splitter.addWidget(self.tray)
@@ -103,6 +113,7 @@ class MainWindow(QMainWindow):
         layout = QVBoxLayout()
         layout.addLayout(controls)
         layout.addLayout(filters)
+        layout.addWidget(self.source_tabs)
         layout.addWidget(QLabel("Results — double click to download"))
         layout.addWidget(splitter, 1)
         layout.addWidget(QLabel("Library — drag into Resolve's media pool"))
@@ -123,7 +134,14 @@ class MainWindow(QMainWindow):
             vectors_only=self.vectors_checkbox.isChecked(),
             commercial_safe_only=self.commercial_safe_checkbox.isChecked(),
             photos_only=self.photos_checkbox.isChecked(),
+            source=self.source_tabs.tabData(self.source_tabs.currentIndex()),
         )
+
+    def _on_source_tab_changed(self, _index: int) -> None:
+        # run_search guards empty text too, but would overwrite the status
+        # with "enter a search term" on a plain tab click.
+        if self.search_input.text().strip():
+            self.run_search()
 
     def run_search(self) -> None:
         query = self.build_query()

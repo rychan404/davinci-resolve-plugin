@@ -3,6 +3,7 @@ import os
 import time
 from datetime import datetime, timezone
 from pathlib import Path
+from types import SimpleNamespace
 
 import httpx
 import pytest
@@ -453,8 +454,9 @@ def test_grid_restarts_the_generation_for_each_search(app):
 
 
 class FakeRegistry:
-    def __init__(self):
+    def __init__(self, names=("openverse", "wikimedia")):
         self.queries = []
+        self.sources = [SimpleNamespace(name=name) for name in names]
 
     def search(self, query):
         self.queries.append(query)
@@ -545,3 +547,58 @@ def test_empty_main_window_search_stays_local(app, tmp_path):
     window.run_search()
     assert registry.queries == []
     assert "enter a search term" == window.status_label.text()
+
+
+def _window(registry, tmp_path):
+    return MainWindow(
+        registry, FakeLibrary(tmp_path / "library"), Config.load(tmp_path / "config.json")
+    )
+
+
+def test_source_tabs_list_all_then_each_configured_provider(app, tmp_path):
+    window = _window(FakeRegistry(("openverse", "wikimedia", "pixabay")), tmp_path)
+    tabs = window.source_tabs
+    assert [tabs.tabText(i) for i in range(tabs.count())] == [
+        "All",
+        "Openverse",
+        "Wikimedia",
+        "Pixabay",
+    ]
+    assert tabs.currentIndex() == 0
+    assert [tabs.tabData(i) for i in range(tabs.count())] == [
+        None,
+        "openverse",
+        "wikimedia",
+        "pixabay",
+    ]
+
+
+def test_switching_tabs_reruns_the_search_against_that_provider(app, tmp_path):
+    registry = FakeRegistry()
+    window = _window(registry, tmp_path)
+    window.search_input.setText("smoke")
+    window.transparent_checkbox.setChecked(True)
+    window.source_tabs.setCurrentIndex(2)
+    assert registry.queries[-1].source == "wikimedia"
+    assert registry.queries[-1].transparent_only
+    window.source_tabs.setCurrentIndex(0)
+    assert registry.queries[-1].source is None
+    assert len(registry.queries) == 2
+
+
+def test_search_uses_the_selected_provider_tab(app, tmp_path):
+    registry = FakeRegistry()
+    window = _window(registry, tmp_path)
+    window.source_tabs.setCurrentIndex(1)  # empty text: no search yet
+    window.search_input.setText("smoke")
+    window.run_search()
+    assert [query.source for query in registry.queries] == ["openverse"]
+
+
+def test_switching_tabs_with_no_search_text_does_nothing(app, tmp_path):
+    registry = FakeRegistry()
+    window = _window(registry, tmp_path)
+    window.search_input.setText("   ")
+    window.source_tabs.setCurrentIndex(1)
+    assert registry.queries == []
+    assert window.status_label.text() == "ready"
