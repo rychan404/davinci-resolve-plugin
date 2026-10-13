@@ -30,6 +30,8 @@ class SearchQuery:
     # Appended deliberately: cli.py constructs this positionally, so new fields
     # have to land after commercial_safe_only.
     photos_only: bool = False
+    # None searches every configured source; a name searches only that one.
+    source: str | None = None
 
 
 class CachedHttp:

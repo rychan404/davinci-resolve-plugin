@@ -153,3 +153,39 @@ def test_cached_http_gives_up_on_long_429(tmp_path):
     else:
         raise AssertionError("expected 429 to surface")
     assert len(calls) == 1 and waits == []
+
+
+def test_registry_searches_only_the_selected_source():
+    outcome = SourceRegistry(
+        [
+            _Source("a", error=RuntimeError("should not be called")),
+            _Source("b", [result("b", "1")]),
+        ]
+    ).search(SearchQuery("smoke", source="b"))
+    assert [entry.uid for entry in outcome.results] == ["b:1"]
+    assert outcome.errors == {}
+
+
+def test_registry_reports_an_unconfigured_source():
+    outcome = SourceRegistry([_Source("a", [result("a", "1")])]).search(
+        SearchQuery("smoke", source="pixabay")
+    )
+    assert outcome.results == []
+    assert outcome.errors == {"pixabay": "not configured"}
+
+
+def test_cli_can_restrict_a_search_to_one_source():
+    from resolvestock.cli import build_parser
+
+    parser = build_parser()
+    assert parser.parse_args(["smoke", "--source", "wikimedia"]).source == "wikimedia"
+    assert parser.parse_args(["smoke"]).source is None
+
+
+def test_cli_rejects_an_unknown_source():
+    import pytest
+    from resolvestock.cli import build_parser
+
+    with pytest.raises(SystemExit) as raised:
+        build_parser().parse_args(["smoke", "--source", "flickr"])
+    assert raised.value.code == 2

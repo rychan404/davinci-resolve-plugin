@@ -34,6 +34,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--transparent", action="store_true")
     parser.add_argument("--vectors", action="store_true")
     parser.add_argument("--photos", action="store_true")
+    parser.add_argument("--source", choices=["openverse", "wikimedia", "pixabay"])
     parser.add_argument("--include-restricted", action="store_true")
     parser.add_argument("--page", type=int, default=1)
     parser.add_argument("--per-page", type=int, default=20)
@@ -56,6 +57,7 @@ def main(argv: list[str] | None = None) -> int:
             vectors_only=args.vectors,
             commercial_safe_only=not args.include_restricted,
             photos_only=args.photos,
+            source=args.source,
         )
     )
     print(format_results(outcome))

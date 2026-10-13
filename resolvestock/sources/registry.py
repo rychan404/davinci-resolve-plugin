@@ -19,7 +19,12 @@ class SourceRegistry:
 
     def search(self, query: SearchQuery) -> SearchOutcome:
         outcome, per_source = SearchOutcome(), []
-        for source in self.sources:
+        sources = [
+            source for source in self.sources if query.source in (None, source.name)
+        ]
+        if query.source and not sources:
+            outcome.errors[query.source] = "not configured"
+        for source in sources:
             try:
                 per_source.append(source.search(query))
             except Exception as error:

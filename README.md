@@ -49,7 +49,8 @@ sources and your API key):
 ```
 
 Options: `--transparent`, `--vectors`, `--photos`, `--include-restricted`
-(include NC/SA/unknown licenses), `--page N`, `--per-page N`.
+(include NC/SA/unknown licenses), `--source openverse|wikimedia|pixabay`
+(search one provider), `--page N`, `--per-page N`.
 
 ## Pixabay key
 
