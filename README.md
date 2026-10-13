@@ -15,14 +15,47 @@ each downloaded asset.
 
 ## Install
 
+Requires Python 3.11 or newer.
+
+macOS / Linux:
+
 ```bash
-python3.11 -m venv .venv
+python3 -m venv .venv
 .venv/bin/python -m pip install -e ".[dev]"
-.venv/bin/resolvestock
 ```
 
-Openverse and Wikimedia Commons work without credentials. Add a Pixabay API
-key to `~/.resolvestock/config.json` to enable Pixabay:
+Windows (PowerShell):
+
+```powershell
+py -m venv .venv
+.venv\Scripts\python -m pip install -e ".[dev]"
+```
+
+## Run
+
+Desktop app:
+
+```bash
+.venv/bin/resolvestock          # macOS / Linux
+.venv\Scripts\resolvestock      # Windows
+```
+
+Terminal search (prints results without opening the app; useful for checking
+sources and your API key):
+
+```bash
+.venv/bin/python -m resolvestock.cli "smoke"                  # macOS / Linux
+.venv\Scripts\python -m resolvestock.cli "smoke" --transparent  # Windows
+```
+
+Options: `--transparent`, `--vectors`, `--photos`, `--include-restricted`
+(include NC/SA/unknown licenses), `--page N`, `--per-page N`.
+
+## Pixabay key
+
+Openverse and Wikimedia Commons work without credentials. To enable Pixabay,
+get a free key from https://pixabay.com/api/docs/ and create
+`~/.resolvestock/config.json` (on Windows, `C:\Users\<you>\.resolvestock\config.json`):
 
 ```json
 {
@@ -30,6 +63,8 @@ key to `~/.resolvestock/config.json` to enable Pixabay:
   "library_dir": "/Users/you/ResolveStock"
 }
 ```
+
+Restart the app after editing the config.
 
 Pixabay API responses are cached for 24 hours and the app provides no
 bulk-download workflow.
@@ -62,7 +97,8 @@ Media Storage and PowerBins.
 ## Development
 
 ```bash
-QT_QPA_PLATFORM=offscreen .venv/bin/python -m pytest -q
+QT_QPA_PLATFORM=offscreen .venv/bin/python -m pytest -q   # macOS / Linux
+.venv\Scripts\python -m pytest -q                         # Windows
 ```
 
 Tests do not make network calls; source adapters use JSON fixtures.
