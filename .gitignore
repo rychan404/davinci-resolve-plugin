@@ -9,3 +9,7 @@ build/
 library/
 docs/
 .claude/
+node_modules/
+out/
+.vite/
+.superpowers/
