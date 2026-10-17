@@ -1,0 +1,16 @@
+{
+  "source": "openverse",
+  "source_id": "abc",
+  "title": "Smoke Plume",
+  "preview_url": "https://example.invalid/preview.png",
+  "download_url": "https://example.invalid/smoke.png",
+  "media_type": "image",
+  "width": 100,
+  "height": null,
+  "has_alpha": null,
+  "license_id": "cc-by",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "attribution": "Smoke Plume by Jane (Openverse)",
+  "source_page_url": "https://example.invalid/page",
+  "downloaded_at": "2026-08-01T12:00:00.123456+00:00"
+}
