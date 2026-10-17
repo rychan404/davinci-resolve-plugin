@@ -65,3 +65,61 @@ body {
   outline: 2px solid #2b6cb0;
   background: #e6f0fa;
 }
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 8px;
+  gap: 6px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.row input[type='text'] {
+  flex: 1;
+  padding: 6px 8px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+}
+
+.tabs button[aria-selected='true'] {
+  font-weight: 600;
+  border-color: #2b6cb0;
+}
+
+.caption {
+  font-weight: 600;
+}
+
+.results {
+  flex: 1;
+  min-height: 80px;
+  overflow: auto;
+  border: 1px solid #ccc;
+}
+
+.tray-panel {
+  height: 240px;
+  min-height: 80px;
+  resize: vertical;
+  overflow: auto;
+  border: 1px solid #ccc;
+}
+
+.status {
+  padding: 4px 0;
+  color: #444;
+}
