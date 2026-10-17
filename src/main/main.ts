@@ -36,7 +36,10 @@ const createWindow = () => {
   });
 
   // Dropping a file on the window must not navigate away from the app.
-  win.webContents.on('will-navigate', (event) => event.preventDefault());
+  win.webContents.on('will-navigate', (event, url) => {
+    // The dev server may reload the page; anything else (e.g. a dropped file) is refused.
+    if (!(MAIN_WINDOW_VITE_DEV_SERVER_URL && url.startsWith(MAIN_WINDOW_VITE_DEV_SERVER_URL))) event.preventDefault();
+  });
   win.webContents.setWindowOpenHandler(() => ({ action: 'deny' }));
 
   if (MAIN_WINDOW_VITE_DEV_SERVER_URL) {
