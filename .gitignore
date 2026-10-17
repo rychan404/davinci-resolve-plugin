@@ -7,3 +7,5 @@ build/
 *.egg-info/
 *.spec
 library/
+docs/
+.claude/
